@@ -14,9 +14,18 @@
 
 @implementation ARHomeController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    self.title = NSStringFromClass([self class]);
+    
+    UIBarButtonItem *leftBBI = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(leftBBIAction)];
+    self.navigationItem.leftBarButtonItem = leftBBI;
+    
+}
+
+- (void)leftBBIAction
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {
