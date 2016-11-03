@@ -1179,6 +1179,7 @@
 				TargetAttributes = {
 					5CFE60141DC75B9C003640A4 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BL86JR5S2K;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1460,6 +1461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BL86JR5S2K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/myhome",
 					"$(PROJECT_DIR)",
@@ -1474,6 +1476,7 @@
 					"$(PROJECT_DIR)/myhome/Thanks/FSShareManager/Lib/libWeiboSDK",
 					"$(PROJECT_DIR)/myhome/Thanks/FSShareManager/Lib/WeChatSDK_1.7.1",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = fuhope.myhome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1483,6 +1486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BL86JR5S2K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/myhome",
 					"$(PROJECT_DIR)",
@@ -1497,6 +1501,7 @@
 					"$(PROJECT_DIR)/myhome/Thanks/FSShareManager/Lib/libWeiboSDK",
 					"$(PROJECT_DIR)/myhome/Thanks/FSShareManager/Lib/WeChatSDK_1.7.1",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = fuhope.myhome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
