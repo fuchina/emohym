@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FSShareManager.h"
+#import "WTShareContentItem.h"
 
 @interface FSShareView : UIView
 
