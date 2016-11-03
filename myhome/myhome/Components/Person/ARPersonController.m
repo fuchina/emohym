@@ -7,7 +7,10 @@
 //
 
 #import "ARPersonController.h"
-#import "GZSShareView.h"
+
+//#import "FSShareView.h"
+//#import "FSShareManager.h"
+//#import "WTShareContentItem.h"
 
 @interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -69,7 +72,13 @@
 
 - (void)showShareView
 {
-    [[GZSShareView shareInstance] shareWithTitle:@"title部分" description:@"来自@小应用" wbContent:@"" shareID:@"shareID" imageUrl:@"https://www.baidu.com" shareURL:@"https://www.apple.com" types:@[@(GZSShareTypeFriends),@(GZSShareTypeWechat),@(GZSShareTypeQQ),@(GZSShareTypeQQZone),@(GZSShareTypeCopy)] controller:self];
+//    __weak ARPersonController *this = self;
+//    FSShareView *shareView = [[FSShareView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    [self.navigationController.view addSubview:shareView];
+//    shareView.block = ^ (FSShareView *bView,NSInteger bTag){
+//        [this shareTo:bTag];
+//    };
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FSCharTBController.h"
+#import "ARTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     NSArray *array = @[@"ARHomeController",@"AROfferController",@"ARToolController",@"ARPersonController"];
     NSArray *titles = @[@"首页",@"发布",@"工具箱",@"我"];
     NSArray *types = @[@(UITabBarSystemItemMostViewed),@(UITabBarSystemItemBookmarks),@(UITabBarSystemItemFavorites),@(UITabBarSystemItemContacts)];
-    FSCharTBController *tbController = [[FSCharTBController alloc] initWithClasses:array titles:titles types:types];
+    ARTabBarController *tbController = [[ARTabBarController alloc] initWithClasses:array titles:titles types:types];
     self.window.rootViewController = tbController;    
     return YES;
 }
