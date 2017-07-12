@@ -199,6 +199,7 @@
 		5C04271B1F15CBB9004AC010 /* Note.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C0426581F15CBB8004AC010 /* Note.txt */; };
 		5C04271C1F15CBB9004AC010 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5C0426591F15CBB8004AC010 /* README.md */; };
 		5C04271D1F15CBB9004AC010 /* FuWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04265D1F15CBB8004AC010 /* FuWeb.m */; };
+		5C0427201F15D136004AC010 /* FSShopClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04271F1F15D136004AC010 /* FSShopClassView.m */; };
 		5C9337B31DCB3F800091D3D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B21DCB3F800091D3D8 /* Security.framework */; };
 		5C9337B81DCB3FA80091D3D8 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */; };
 		5C9337BA1DCB3FAE0091D3D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9337B91DCB3FAE0091D3D8 /* SystemConfiguration.framework */; };
@@ -609,6 +610,8 @@
 		5C04265B1F15CBB8004AC010 /* FSWebUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWebUrl.h; sourceTree = "<group>"; };
 		5C04265C1F15CBB8004AC010 /* FuWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuWeb.h; sourceTree = "<group>"; };
 		5C04265D1F15CBB8004AC010 /* FuWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuWeb.m; sourceTree = "<group>"; };
+		5C04271E1F15D136004AC010 /* FSShopClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShopClassView.h; sourceTree = "<group>"; };
+		5C04271F1F15D136004AC010 /* FSShopClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShopClassView.m; sourceTree = "<group>"; };
 		5C9337B21DCB3F800091D3D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5C9337B71DCB3FA80091D3D8 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		5C9337B91DCB3FAE0091D3D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -1693,6 +1696,8 @@
 				5CFE601C1DC75B9C003640A4 /* AppDelegate.m */,
 				71474B681DCABB1C0063DA08 /* ARTabBarController.h */,
 				71474B691DCABB1C0063DA08 /* ARTabBarController.m */,
+				5C04271E1F15D136004AC010 /* FSShopClassView.h */,
+				5C04271F1F15D136004AC010 /* FSShopClassView.m */,
 				5CFE60211DC75B9C003640A4 /* Main.storyboard */,
 				5CFE60241DC75B9C003640A4 /* Assets.xcassets */,
 				5CFE60261DC75B9C003640A4 /* LaunchScreen.storyboard */,
@@ -1984,6 +1989,7 @@
 				5C0426B61F15CBB8004AC010 /* FSLocationModel.m in Sources */,
 				5C0426691F15CBB8004AC010 /* FSABSearchController.m in Sources */,
 				5C0426D31F15CBB8004AC010 /* FSWebImageView.m in Sources */,
+				5C0427201F15D136004AC010 /* FSShopClassView.m in Sources */,
 				5C0426EF1F15CBB8004AC010 /* FSSearchController.m in Sources */,
 				5C0427021F15CBB8004AC010 /* FSLoanCounterController.m in Sources */,
 				5C04268A1F15CBB8004AC010 /* FSABOneminusController.m in Sources */,

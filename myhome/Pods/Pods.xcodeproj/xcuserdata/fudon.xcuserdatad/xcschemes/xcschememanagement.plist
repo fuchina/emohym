@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-myhome.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>BB44DA75D6BF7CC4E48D3E494BFFDCA7</key>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E587B74B0E1238288E154DBDF17A9D02</key>
+		<key>99D4F5EA269C19FBE5F8E066C35735D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB44DA75D6BF7CC4E48D3E494BFFDCA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
