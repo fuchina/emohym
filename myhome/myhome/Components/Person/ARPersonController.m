@@ -8,6 +8,7 @@
 
 #import "ARPersonController.h"
 #import "FSShareView.h"
+#import <FSKit.h>
 
 @interface ARPersonController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -81,28 +82,28 @@
 {
     if (tag == WTShareTypeWeiBo) {
         [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeWeiBo shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitile:shareResult];
+            [FSKit showAlertWithMessage:shareResult];
         }];
         
     }else if (tag == WTShareTypeQQ){
         [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeQQ shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitile:shareResult];
+            [FSKit showAlertWithMessage:shareResult];
         }];
     }else if (tag == WTShareTypeQQZone){
         [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeQQZone shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitile:shareResult];
+            [FSKit showAlertWithMessage:shareResult];
         }];
     }else if (tag == WTShareTypeWeiXinTimeline){
         [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeWeiXinTimeline shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitile:shareResult];
+            [FSKit showAlertWithMessage:shareResult];
         }];
     }else if (tag == WTShareTypeWeiXinSession){
         [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeWeiXinSession shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitile:shareResult];
+            [FSKit showAlertWithMessage:shareResult];
         }];
     }else if (tag == WTShareTypeWeiXinFavorite){
         [FSShareManager wt_shareWithContent:[WTShareContentItem shareWTShareContentItem] shareType:WTShareTypeWeiXinFavorite shareResult:^(NSString *shareResult) {
-            [FuData showAlertViewWithTitile:shareResult];
+            [FSKit showAlertWithMessage:shareResult];
         }];
     }
 }
