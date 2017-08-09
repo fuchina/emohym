@@ -10,4 +10,7 @@
 
 @interface FSShopClassView : UIView
 
+@property (nonatomic,strong) NSArray    *dataSource;
+@property (nonatomic,copy) void (^selectedBlock)(FSShopClassView *bView,NSInteger bIndex);
+
 @end

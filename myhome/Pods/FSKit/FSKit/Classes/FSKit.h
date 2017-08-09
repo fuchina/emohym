@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "FuSoft.h"
-#import <CommonCrypto/CommonCryptor.h>
 #import <CoreLocation/CoreLocation.h>
 
 @interface FSKit : NSObject
@@ -19,21 +18,11 @@
 
 + (void)popToController:(NSString *)className navigationController:(UINavigationController *)navigationController animated:(BOOL)animated;
 
-// 一个按钮
-+ (void)alertView1WithTitle:(NSString *)title message:(NSString *)message btnTitle:(NSString *)btnTitle handler:(void (^)(UIAlertAction *action))handler completion:(void (^)(void))completion;
-// 两个按钮
-+ (void)alertViewWithTitle:(NSString *)title message:(NSString *)message btnTitle:(NSString *)btnTitle handler:(void (^)(UIAlertAction *action))cancelHandler cancelTitle:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))handler completion:(void (^)(void))completion;
-+ (void)alertViewWithTitle:(NSString *)title message:(NSString *)message destructTitle:(NSString *)btnTitle handler:(void (^)(UIAlertAction *action))destructHandler cancelTitle:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler completion:(void (^)(void))completion;
-+ (void)alertViewWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler okTitle:(NSString *)okTitle handler:(void (^)(UIAlertAction *action))handler destructTitle:destructTitle handler:(void (^)(UIAlertAction *action))destructHandler completion:(void (^)(void))completion;
+// 根据action.title映射titles中的字段来判断点击事件   UIAlertActionStyleDefault
++ (void)alert:(UIAlertControllerStyle)style title:(NSString *)title message:(NSString *)message actionTitles:(NSArray<NSString *> *)titles styles:(NSArray<NSNumber *> *)styles handler:(void (^)(UIAlertAction *action))handler cancelTitle:(NSString *)cancelTitle cancel:(void (^)(UIAlertAction *action))cancel completion:(void (^)(void))completion;
 
-+ (void)alertViewInputWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler okTitle:(NSString *)okTitle handler:(void (^)(UIAlertController *bAlert,UIAlertAction *action))handler textFieldConifg:(void (^)(UITextField *textField))configurationHandler completion:(void (^)(void))completion;
-+ (void)alertViewInputsWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler okTitle:(NSString *)okTitle handler:(void (^)(UIAlertController *bAlert,UIAlertAction *action))handler textFieldConifg:(void (^)(UITextField *textField))configurationHandler textFieldConifg:(void (^)(UITextField *textField))configuration completion:(void (^)(void))completion;
-+ (void)alertView3InputsWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler okTitle:(NSString *)okTitle handler:(void (^)(UIAlertController *bAlert,UIAlertAction *action))handler textFieldConifg:(void (^)(UITextField *textField))firstConfig textFieldConifg:(void (^)(UITextField *textField))secondConfig textFieldConifg:(void (^)(UITextField *textField))thirdConfig completion:(void (^)(void))completion;
-+ (void)alertViewFourInputsWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler okTitle:(NSString *)okTitle handler:(void (^)(UIAlertController *bAlert,UIAlertAction *action))handler textFieldConifg:(void (^)(UITextField *textField))firstConfig textFieldConifg:(void (^)(UITextField *textField))secondConfig textFieldConifg:(void (^)(UITextField *textField))thirdConfig textFieldConifg:(void (^)(UITextField *textField))forthConfig completion:(void (^)(void))completion;
-
-+ (void)actionSheet1WithTitle:(NSString *)title firstTitle:(NSString *)firstTitle style:(UIAlertActionStyle)style firstHandler:(void (^)(UIAlertAction *action))firstHandler cancelHandler:(void (^)(UIAlertAction *action))cancelHandler completion:(void (^)(void))completion;
-+ (void)actionSheet2WithTitle:(NSString *)title firstTitle:(NSString *)firstTitle style:(UIAlertActionStyle)firstStyle firstHandler:(void (^)(UIAlertAction *action))firstHandler secondTitle:(NSString *)secondTitle style:(UIAlertActionStyle)secondStyle handler:(void (^)(UIAlertAction *action))secondHandler cancelHandler:(void (^)(UIAlertAction *action))cancelHandler completion:(void (^)(void))completion;
-+ (void)actionSheet3WithTitle:(NSString *)title firstTitle:(NSString *)firstTitle style:(UIAlertActionStyle)firstStyle firstHandler:(void (^)(UIAlertAction *action))firstHandler secondTitle:(NSString *)secondTitle style:(UIAlertActionStyle)secondStyle handler:(void (^)(UIAlertAction *action))secondHandler thirdTitle:(NSString *)third style:(UIAlertActionStyle)thirdStyle handler:(void (^)(UIAlertAction *action))thrHandler  cancelHandler:(void (^)(UIAlertAction *action))cancelHandler completion:(void (^)(void))completion;
+// 有输入框时，number为输入框数量，根据textField的tag【0、1、2...】来配置textField
++ (void)alertInput:(NSInteger)number title:(NSString *)title message:(NSString *)message ok:(NSString *)okTitle handler:(void (^)(UIAlertController *bAlert,UIAlertAction *action))handler cancel:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler textFieldConifg:(void (^)(UITextField *textField))configurationHandler completion:(void (^)(void))completion;
 
 + (void)pushToViewControllerWithClass:(NSString *)className navigationController:(UINavigationController *)navigationController param:(NSDictionary *)param configBlock:(void (^)(id vc))configBlockParam;
 + (void)presentToViewControllerWithClass:(NSString *)className controller:(UIViewController *)viewController param:(NSDictionary *)param configBlock:(void (^)(UIViewController *vc))configBlockParam presentCompletion:(void(^)(void))completion;
@@ -50,7 +39,6 @@
 + (void)showMessage:(NSString *)message;
 + (void)showAlertWithMessage:(NSString *)message;
 
-+ (BOOL)isValidateMobile:(NSString *)mobile;
 + (BOOL)isValidateEmail:(NSString *)str;
 + (BOOL)isPureInt:(NSString *)string;
 + (BOOL)isPureFloat:(NSString*)string;
@@ -70,12 +58,9 @@
 + (BOOL)isValidateUserPasswd :(NSString *)str;
 + (BOOL)isChar:(NSString *)str;
 + (BOOL)isNumber:(NSString *)str;
-+ (BOOL)isDateAEarlierThanDateB:(NSDate *)aDate bDate:(NSDate *)bDate;
 + (BOOL)isString:(NSString *)aString containString:(NSString *)bString;
 + (BOOL)isStringContainsStringAndNumber:(NSString *)sourceString;
 + (int)isTheSameDayA:(NSDate *)aDate b:(NSDate *)bDate;
-+ (BOOL)isDateA:(NSDate *)aDate earlierToB:(NSDate *)bDate;
-+ (BOOL)checkTextFieldHasValidInput:(UITextField *)textField;
 + (BOOL)isURLString:(NSString *)sourceString;//0
 // 判断字符串是否含有中文
 + (BOOL)isHaveChineseInString:(NSString *)string;
@@ -87,7 +72,6 @@
 + (BOOL)isValidateDictionary:(NSDictionary *)dictionary;
 + (BOOL)floatEqual:(float)aNumber bNumber:(float)bNumber;
 
-+ (CGFloat)absoluteValue:(CGFloat)value;
 // 五险一金后工资应缴税额
 + (CGFloat)taxForSalaryAfterSocialSecurity:(CGFloat)money;
 // 根据税后推算税前
@@ -96,8 +80,7 @@
 + (NSArray *)taxRateForMoney:(CGFloat)money;
 
 + (NSTimeInterval)mmSecondsSince1970;
-+ (NSInteger)secondsSince1970;
-+ (NSTimeInterval)chinaSecondsSince1970;
++ (NSInteger)integerSecondsSince1970;
 + (NSInteger)weekdayStringFromDate:(NSDate *)inputDate;
 + (NSDateComponents *)yearMonthDayFromDate:(NSDate *)date;
 
@@ -145,7 +128,6 @@
 + (NSString *)stringDeleteNewLineAndWhiteSpace:(NSString *)string;
 + (NSString *)adID;
 + (NSString *)pathForResource:(NSString *)name type:(NSString *)type;
-//+ (NSString *)tripleDES:(NSString *)plainText encryptOrDecrypt:(CCOperation)encryptOrDecrypt encryptOrDecryptKey:(NSString *)encryptOrDecryptKey;
 + (NSString *)timeStamp;
 + (NSString *)macaddress;
 + (NSString *)identifierForVendorFromKeyChain;
@@ -198,6 +180,7 @@
 + (NSAttributedString *)attributedStringFor:(NSString *)sourceString strings:(NSArray *)colorStrings color:(UIColor *)color fontStrings:(NSArray *)fontStrings font:(UIFont *)font;
 
 + (NSString *)firstCharacterWithString:(NSString *)string;
++ (NSString *)forthCarNumber:(NSString *)text;
 
 //     strikeLabel.attributedText = attribtStr;
 - (NSAttributedString *)middleLineForLabel:(NSString *)text;    // 中划线
@@ -253,6 +236,7 @@
 
 + (NSArray<NSString *> *)propertiesForClass:(Class)className;   // 获取类的所有属性
 + (SEL)setterSELWithAttibuteName:(NSString*)attributeName;      // 将字符串转化为Set方法，如将"name"转化为setName方法
++ (void)setValue:(id)value forPropertyName:(NSString *)name ofObject:(id)object;    // 给对象的属性赋值
 + (NSString *)valueForGetSelectorWithPropertyName:(NSString *)name object:(id)instance;  // 获取实例的属性的值
 
 + (NSDictionary *)keyedUnarchiverWithDictionary:(NSString *)fileName;
@@ -265,8 +249,6 @@
 
 + (NSNumber *)keyedUnarchiverWithNumber:(NSString *)fileName;
 + (NSNumber *)fileSize:(NSString *)filePath;
-+ (NSValue *)rangeValue:(NSRange)range;
-
 + (UIColor *)randomColor;
 + (UIColor *)colorWithHexString:(NSString *)color;               // 根据16进制字符串获得颜色类对象
 

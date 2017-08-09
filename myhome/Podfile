@@ -1,5 +1,5 @@
 platform :ios, '8.0'
-  pod ‘FSKit’
+  pod ‘FSKit’,’1.0.1’
   pod 'MJRefresh','~>3.1.12'
 
 target ‘myhome’ do
