@@ -173,6 +173,7 @@
 		5C04271C1F15CBB9004AC010 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5C0426591F15CBB8004AC010 /* README.md */; };
 		5C04271D1F15CBB9004AC010 /* FuWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04265D1F15CBB8004AC010 /* FuWeb.m */; };
 		5C0427201F15D136004AC010 /* FSShopClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04271F1F15D136004AC010 /* FSShopClassView.m */; };
+		5C36556B1F46B9B90035D26B /* FSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36556A1F46B9B90035D26B /* FSToast.m */; };
 		5C406B7A1F457BB7000A9F21 /* FSAddUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B6F1F457BB7000A9F21 /* FSAddUrlController.m */; };
 		5C406B7B1F457BB7000A9F21 /* FSDemoUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B711F457BB7000A9F21 /* FSDemoUrlController.m */; };
 		5C406B7C1F457BB7000A9F21 /* FSInputTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B731F457BB7000A9F21 /* FSInputTableView.m */; };
@@ -180,9 +181,12 @@
 		5C406B7E1F457BB7000A9F21 /* FSUrlInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B771F457BB7000A9F21 /* FSUrlInputController.m */; };
 		5C406B7F1F457BB7000A9F21 /* FSUrlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B791F457BB7000A9F21 /* FSUrlModel.m */; };
 		5C406B821F4595CA000A9F21 /* FSHalfView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B811F4595CA000A9F21 /* FSHalfView.m */; };
+		5C4ACBDC1F4C4F3E003C2778 /* FSPwdMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */; };
 		5C4B3BA51F39D64100E9B152 /* FSSeaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B3BA41F39D64100E9B152 /* FSSeaController.m */; };
 		5C4C3C3E1F414D210062AFF6 /* FSEditNetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C3C3D1F414D210062AFF6 /* FSEditNetsController.m */; };
 		5C4C3C411F41721F0062AFF6 /* FSAllAlertsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C3C401F41721F0062AFF6 /* FSAllAlertsController.m */; };
+		5C50E3F61F4A916F00E00B29 /* FSAddFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C50E3F11F4A916F00E00B29 /* FSAddFormController.m */; };
+		5C50E3F81F4A916F00E00B29 /* FSFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C50E3F51F4A916F00E00B29 /* FSFormModel.m */; };
 		5C83D77E1F309BFD00A13A2E /* FSABPackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C83D77B1F309BFD00A13A2E /* FSABPackView.m */; };
 		5C83D77F1F309BFD00A13A2E /* FSPackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C83D77D1F309BFD00A13A2E /* FSPackView.m */; };
 		5C83D7811F309C5F00A13A2E /* note.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C83D7801F309C5F00A13A2E /* note.txt */; };
@@ -554,6 +558,8 @@
 		5C04265D1F15CBB8004AC010 /* FuWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuWeb.m; sourceTree = "<group>"; };
 		5C04271E1F15D136004AC010 /* FSShopClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShopClassView.h; sourceTree = "<group>"; };
 		5C04271F1F15D136004AC010 /* FSShopClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShopClassView.m; sourceTree = "<group>"; };
+		5C3655691F46B9B90035D26B /* FSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSToast.h; sourceTree = "<group>"; };
+		5C36556A1F46B9B90035D26B /* FSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSToast.m; sourceTree = "<group>"; };
 		5C406B6E1F457BB7000A9F21 /* FSAddUrlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAddUrlController.h; sourceTree = "<group>"; };
 		5C406B6F1F457BB7000A9F21 /* FSAddUrlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAddUrlController.m; sourceTree = "<group>"; };
 		5C406B701F457BB7000A9F21 /* FSDemoUrlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDemoUrlController.h; sourceTree = "<group>"; };
@@ -568,12 +574,18 @@
 		5C406B791F457BB7000A9F21 /* FSUrlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUrlModel.m; sourceTree = "<group>"; };
 		5C406B801F4595CA000A9F21 /* FSHalfView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSHalfView.h; sourceTree = "<group>"; };
 		5C406B811F4595CA000A9F21 /* FSHalfView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSHalfView.m; sourceTree = "<group>"; };
+		5C4ACBDA1F4C4F3E003C2778 /* FSPwdMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPwdMaker.h; sourceTree = "<group>"; };
+		5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPwdMaker.m; sourceTree = "<group>"; };
 		5C4B3BA31F39D64100E9B152 /* FSSeaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSeaController.h; sourceTree = "<group>"; };
 		5C4B3BA41F39D64100E9B152 /* FSSeaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSeaController.m; sourceTree = "<group>"; };
 		5C4C3C3C1F414D210062AFF6 /* FSEditNetsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSEditNetsController.h; sourceTree = "<group>"; };
 		5C4C3C3D1F414D210062AFF6 /* FSEditNetsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSEditNetsController.m; sourceTree = "<group>"; };
 		5C4C3C3F1F41721F0062AFF6 /* FSAllAlertsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAllAlertsController.h; sourceTree = "<group>"; };
 		5C4C3C401F41721F0062AFF6 /* FSAllAlertsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAllAlertsController.m; sourceTree = "<group>"; };
+		5C50E3F01F4A916F00E00B29 /* FSAddFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAddFormController.h; sourceTree = "<group>"; };
+		5C50E3F11F4A916F00E00B29 /* FSAddFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAddFormController.m; sourceTree = "<group>"; };
+		5C50E3F41F4A916F00E00B29 /* FSFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFormModel.h; sourceTree = "<group>"; };
+		5C50E3F51F4A916F00E00B29 /* FSFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFormModel.m; sourceTree = "<group>"; };
 		5C83D77A1F309BFD00A13A2E /* FSABPackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSABPackView.h; sourceTree = "<group>"; };
 		5C83D77B1F309BFD00A13A2E /* FSABPackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABPackView.m; sourceTree = "<group>"; };
 		5C83D77C1F309BFD00A13A2E /* FSPackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPackView.h; sourceTree = "<group>"; };
@@ -701,6 +713,8 @@
 				5C0424B01F15CBB8004AC010 /* 3rd */,
 				5C04254E1F15CBB8004AC010 /* FSKitDuty.h */,
 				5C04254F1F15CBB8004AC010 /* FSKitDuty.m */,
+				5C3655691F46B9B90035D26B /* FSToast.h */,
+				5C36556A1F46B9B90035D26B /* FSToast.m */,
 				5C0425501F15CBB8004AC010 /* FSMacro.h */,
 				5C0425511F15CBB8004AC010 /* Module */,
 				5C04265A1F15CBB8004AC010 /* Tool */,
@@ -1480,6 +1494,8 @@
 				5CF049761F3473EC00CF239D /* FSVanView.m */,
 				5C4B3BA31F39D64100E9B152 /* FSSeaController.h */,
 				5C4B3BA41F39D64100E9B152 /* FSSeaController.m */,
+				5C4ACBDA1F4C4F3E003C2778 /* FSPwdMaker.h */,
+				5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */,
 			);
 			path = ViewForFSKit;
 			sourceTree = "<group>";
@@ -1489,6 +1505,10 @@
 			children = (
 				5C917C291F38629000B3A8C6 /* FSDBAddMobanController.h */,
 				5C917C2A1F38629000B3A8C6 /* FSDBAddMobanController.m */,
+				5C50E3F01F4A916F00E00B29 /* FSAddFormController.h */,
+				5C50E3F11F4A916F00E00B29 /* FSAddFormController.m */,
+				5C50E3F41F4A916F00E00B29 /* FSFormModel.h */,
+				5C50E3F51F4A916F00E00B29 /* FSFormModel.m */,
 				5C917C2B1F38629000B3A8C6 /* FSDBFormModel.h */,
 				5C917C2C1F38629000B3A8C6 /* FSDBFormModel.m */,
 				5C917C2D1F38629000B3A8C6 /* FSDBMobanController.h */,
@@ -1645,7 +1665,6 @@
 				5C0424AE1F15CBB8004AC010 /* FuSoft */,
 				5CB39FE61DC9FCEB00564280 /* Thanks */,
 				5CFE61A11DC75C67003640A4 /* Components */,
-				5CFE61A21DC75C67003640A4 /* PublicBase */,
 				5CFE601B1DC75B9C003640A4 /* AppDelegate.h */,
 				5CFE601C1DC75B9C003640A4 /* AppDelegate.m */,
 				71474B681DCABB1C0063DA08 /* ARTabBarController.h */,
@@ -1699,13 +1718,6 @@
 				5CA360D31DC8AD4700523FF5 /* Tool */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		5CFE61A21DC75C67003640A4 /* PublicBase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PublicBase;
 			sourceTree = "<group>";
 		};
 		8F00FE3B2C8F5D42A92E40F8 /* Pods */ = {
@@ -1984,6 +1996,7 @@
 				5C406B7B1F457BB7000A9F21 /* FSDemoUrlController.m in Sources */,
 				5C0426A31F15CBB8004AC010 /* UIViewController+BackButtonHandler.m in Sources */,
 				5C0427171F15CBB9004AC010 /* FSTaxOfIncomeController.m in Sources */,
+				5C4ACBDC1F4C4F3E003C2778 /* FSPwdMaker.m in Sources */,
 				5C0426951F15CBB8004AC010 /* FSAddTrackController.m in Sources */,
 				5C0426E41F15CBB8004AC010 /* FSBeyondButton.m in Sources */,
 				5C0426821F15CBB8004AC010 /* FSFMExpectController.m in Sources */,
@@ -1998,6 +2011,7 @@
 				5C0426C41F15CBB8004AC010 /* FSSave.m in Sources */,
 				5C0427031F15CBB8004AC010 /* FSLoanResultController.m in Sources */,
 				5C0426E81F15CBB8004AC010 /* FSMoreImageCell.m in Sources */,
+				5C36556B1F46B9B90035D26B /* FSToast.m in Sources */,
 				71474B6A1DCABB1C0063DA08 /* ARTabBarController.m in Sources */,
 				5C0427161F15CBB9004AC010 /* FSTaxDetailView.m in Sources */,
 				5C0426B51F15CBB8004AC010 /* FSLocationController.m in Sources */,
@@ -2005,6 +2019,7 @@
 				5C04271C1F15CBB9004AC010 /* README.md in Sources */,
 				5C0426B41F15CBB8004AC010 /* FSLocationCell.m in Sources */,
 				5C0427001F15CBB8004AC010 /* FSBorrowArrowController.m in Sources */,
+				5C50E3F61F4A916F00E00B29 /* FSAddFormController.m in Sources */,
 				5C406B7A1F457BB7000A9F21 /* FSAddUrlController.m in Sources */,
 				5C0426891F15CBB8004AC010 /* FSABModel.m in Sources */,
 				5C0426961F15CBB8004AC010 /* FSHTTP.m in Sources */,
@@ -2024,6 +2039,7 @@
 				5C4C3C3E1F414D210062AFF6 /* FSEditNetsController.m in Sources */,
 				5C4C3C411F41721F0062AFF6 /* FSAllAlertsController.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
+				5C50E3F81F4A916F00E00B29 /* FSFormModel.m in Sources */,
 				5C917C301F38629000B3A8C6 /* FSDBFormModel.m in Sources */,
 				5C0426BD1F15CBB8004AC010 /* FSCharTBController.m in Sources */,
 				5C0426ED1F15CBB8004AC010 /* FSSeeImageView.m in Sources */,

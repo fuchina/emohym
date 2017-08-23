@@ -15,7 +15,7 @@
 + (id)userDefaultsDataWithKey:(NSString *)key;
 + (id)objectFromJSonstring:(NSString *)jsonString;
 
-+ (void)popToController:(NSString *)className navigationController:(UINavigationController *)navigationController animated:(BOOL)animated;
++ (BOOL)popToController:(NSString *)className navigationController:(UINavigationController *)navigationController animated:(BOOL)animated;
 
 // 根据action.title映射titles中的字段来判断点击事件   UIAlertActionStyleDefault
 + (void)alert:(UIAlertControllerStyle)style title:(NSString *)title message:(NSString *)message actionTitles:(NSArray<NSString *> *)titles styles:(NSArray<NSNumber *> *)styles handler:(void (^)(UIAlertAction *action))handler cancelTitle:(NSString *)cancelTitle cancel:(void (^)(UIAlertAction *action))cancel completion:(void (^)(void))completion;
@@ -37,6 +37,7 @@
 
 + (void)showMessage:(NSString *)message;
 + (void)showAlertWithMessage:(NSString *)message;
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 
 + (BOOL)isValidateEmail:(NSString *)str;
 + (BOOL)isPureInt:(NSString *)string;
@@ -110,13 +111,13 @@
 + (NSInteger)getAvailableDiskSize;   // 获取磁盘可用量
 
 + (NSString *)appVersionNumber;                                                     // 获得版本号
-+ (NSString *)appName;                                                              // 获得应用的Bundle Display Name
++ (NSString *)appName;  // App名字
++ (NSString *)appBundleName; // 获得应用Bundle，如com.hope.myhome的myhome
 + (NSString *)iPAddress;
 + (NSString *)randomNumberWithDigit:(int)digit;
 + (NSString *)blankInChars:(NSString *)string byCellNo:(int)num;
 + (NSString *)jsonStringWithObject:(id)dic;
 + (NSString *)JSONString:(NSString *)aString;
-+ (NSString *)dataToString:(NSData *)data;
 + (NSString *)dataToString:(NSData *)data withEncoding:(NSStringEncoding)encode;
 + (NSString *)homeDirectoryPath:(NSString *)fileName;
 + (NSString *)keyedUnarchiverWithString:(NSString *)fileName;
@@ -125,9 +126,7 @@
 + (NSString *)localFilePath:(NSString *)fileName;
 + (NSString *)md5:(NSString *)str;
 + (NSString *)stringDeleteNewLineAndWhiteSpace:(NSString *)string;
-+ (NSString *)adID;
 + (NSString *)pathForResource:(NSString *)name type:(NSString *)type;
-+ (NSString *)timeStamp;
 + (NSString *)macaddress;
 + (NSString *)identifierForVendorFromKeyChain;
 + (NSString *)asciiCodeWithString:(NSString *)string;
@@ -149,9 +148,7 @@
 + (NSString *)tenThousandNumberString:(NSString *)value;
 + (NSString *)urlEncodedString:(NSString *)urlString;
 + (NSString *)urlDecodedString:(NSString *)urlString;
-+ (NSString *)replaceString:(NSMutableString *)string byString:(NSString *)replaceString;
 + (NSString *)placeholderStringFor:(NSString *)sourceString;
-+ (NSString *)placeholderStringFor:(NSString *)sourceString with:(NSString *)placeholderString;
 + (NSString *)addStringWithSpace:(NSString *)aString bString:(NSString *)bString;
 + (NSString *)base64StringForText:(NSString *)text;     // 将字符串转换为base64编码
 + (NSString *)textFromBase64String:(NSString *)text;    // 将base64转换为字符串
@@ -213,7 +210,6 @@
 
 + (void)call:(NSString *)phone;
 + (void)callPhoneWithNoNotice:(NSString *)phone;
-+ (void)gotoDownloadApp:(NSString *)appid;
 + (void)openAppByURLString:(NSString *)str;
 
 // 操作闪光灯
@@ -226,7 +222,6 @@
 + (NSArray *)arrayFromArray:(NSArray *)array withString:(NSString *)string;
 + (NSArray *)arrayByOneCharFromString:(NSString *)string;
 + (NSArray *)keyedUnarchiverWithArray:(NSString *)fileName;
-+ (NSArray *)arrayFromJsonstring:(NSString *)string;
 + (NSArray *)arrayReverseWithArray:(NSArray *)array;
 + (NSArray *)maxandMinNumberInArray:(NSArray *)array;                           // 找出数组中最大的数 First Max, Last Min
 + (NSArray *)maopaoArray:(NSArray *)array;
@@ -240,7 +235,6 @@
 
 + (NSDictionary *)keyedUnarchiverWithDictionary:(NSString *)fileName;
 
-+ (NSData *)dataFromString:(NSString *)string;
 + (NSData *)keyedUnarchiverWithData:(NSString *)fileName;
 + (NSData*)rsaEncryptString:(SecKeyRef)key data:(NSString*) data;
 //压缩图片到指定文件大小
