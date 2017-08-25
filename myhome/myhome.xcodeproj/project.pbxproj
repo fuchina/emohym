@@ -181,6 +181,8 @@
 		5C406B7E1F457BB7000A9F21 /* FSUrlInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B771F457BB7000A9F21 /* FSUrlInputController.m */; };
 		5C406B7F1F457BB7000A9F21 /* FSUrlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B791F457BB7000A9F21 /* FSUrlModel.m */; };
 		5C406B821F4595CA000A9F21 /* FSHalfView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B811F4595CA000A9F21 /* FSHalfView.m */; };
+		5C4259AC1F50405900DAED6A /* CSPMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4259A91F50405900DAED6A /* CSPMessageController.m */; };
+		5C4259AD1F50405900DAED6A /* FSBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4259AB1F50405900DAED6A /* FSBT.m */; };
 		5C4ACBDC1F4C4F3E003C2778 /* FSPwdMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */; };
 		5C4B3BA51F39D64100E9B152 /* FSSeaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B3BA41F39D64100E9B152 /* FSSeaController.m */; };
 		5C4C3C3E1F414D210062AFF6 /* FSEditNetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C3C3D1F414D210062AFF6 /* FSEditNetsController.m */; };
@@ -574,6 +576,10 @@
 		5C406B791F457BB7000A9F21 /* FSUrlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUrlModel.m; sourceTree = "<group>"; };
 		5C406B801F4595CA000A9F21 /* FSHalfView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSHalfView.h; sourceTree = "<group>"; };
 		5C406B811F4595CA000A9F21 /* FSHalfView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSHalfView.m; sourceTree = "<group>"; };
+		5C4259A81F50405900DAED6A /* CSPMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPMessageController.h; sourceTree = "<group>"; };
+		5C4259A91F50405900DAED6A /* CSPMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPMessageController.m; sourceTree = "<group>"; };
+		5C4259AA1F50405900DAED6A /* FSBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBT.h; sourceTree = "<group>"; };
+		5C4259AB1F50405900DAED6A /* FSBT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBT.m; sourceTree = "<group>"; };
 		5C4ACBDA1F4C4F3E003C2778 /* FSPwdMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPwdMaker.h; sourceTree = "<group>"; };
 		5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPwdMaker.m; sourceTree = "<group>"; };
 		5C4B3BA31F39D64100E9B152 /* FSSeaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSeaController.h; sourceTree = "<group>"; };
@@ -1496,6 +1502,10 @@
 				5C4B3BA41F39D64100E9B152 /* FSSeaController.m */,
 				5C4ACBDA1F4C4F3E003C2778 /* FSPwdMaker.h */,
 				5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */,
+				5C4259A81F50405900DAED6A /* CSPMessageController.h */,
+				5C4259A91F50405900DAED6A /* CSPMessageController.m */,
+				5C4259AA1F50405900DAED6A /* FSBT.h */,
+				5C4259AB1F50405900DAED6A /* FSBT.m */,
 			);
 			path = ViewForFSKit;
 			sourceTree = "<group>";
@@ -1902,9 +1912,11 @@
 				5C0426AE1F15CBB8004AC010 /* FSAppRunState.m in Sources */,
 				5C0426A21F15CBB8004AC010 /* UIView+Addition.m in Sources */,
 				5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */,
+				5C4259AC1F50405900DAED6A /* CSPMessageController.m in Sources */,
 				5C0426741F15CBB8004AC010 /* ChineseCalendarView.m in Sources */,
 				5C0426A71F15CBB8004AC010 /* FSAddBirthdayController.m in Sources */,
 				5C0426F41F15CBB8004AC010 /* FSPwdController.m in Sources */,
+				5C4259AD1F50405900DAED6A /* FSBT.m in Sources */,
 				5C0426CC1F15CBB8004AC010 /* FSImageLabelView.m in Sources */,
 				5C0426CD1F15CBB8004AC010 /* FSMoveLabel.m in Sources */,
 				5C0426DB1F15CBB8004AC010 /* FSPartListController.m in Sources */,
