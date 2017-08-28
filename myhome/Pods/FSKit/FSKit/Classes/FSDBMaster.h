@@ -27,6 +27,7 @@
 /*
  NOTE:
  1.需要在 Link Binary With Libraries 中导入 libsqlite3.tbd库
+ 2.因为id是苹果的关键字，所以用aid来作为自增id名，Model里有这个名为aid属性，就会得到NSNumber的值；但不能给这个属性赋值。
  3.表名,不要和所存的类名相同。因为如果类增加了字段，表中就没有该字段。
  4.time是唯一key，如果time相同，会报错。如果time是[[NSDate date] timeSecondSince1970]的秒数，有小数点后数字的话，一般都不相同
  5.多线程会出错，比如在 dispatch_group_t dispatchGroup = dispatch_group_create();中多线程查询，会出现EXC_BAD_ACCESS
@@ -85,21 +86,25 @@
 - (NSString *)execSQL:(NSString *)SQL type:(NSString *)type;
 
 /*
+ 【SELECT DISTINCT name FROM %@;】// 从%@表中查询name字段的所有不重复的值
  【SELECT * FROM %@ WHERE name = 'ddd';】
- 【SELECT * FROM %@ WHERE atype = ? OR btype = ? and time BETWEEN 1483228800 AND 1514764799 order by time DESC limit 0,1000000;】
+ 【SELECT * FROM %@ order by time DESC limit 0,10;】    ASC
+ 【SELECT * FROM %@ WHERE atype = ? OR btype = ? and time BETWEEN 1483228800 AND 1514764799 order by time DESC limit 0,10;】
  */
-- (NSMutableArray *)findEntitySQL:(NSString *)sql class:(Class)className tableName:(NSString *)tableName;
+- (NSMutableArray *)querySQL:(NSString *)sql tableName:(NSString *)tableName;
+
+//  检查表是否存在
+- (BOOL)checkTableExist:(NSString *)tableName;
+
+//  获取表名的所有数据数量
+- (int)countForTable:(NSString *)tableName;
 
 /*
- 【SELECT * FROM %@ order by time DESC limit 0,1000000;】    ASC
+ 根据sql语句获取满足条件的数据数量；count(*)内部可以是*，也可是字段名来限制范围。
+ 【select count(*) from dbgroup Where cast(freq as INTEGER) > 30;】查询满足条件的数据条数；
+ 【select count(DISTINCT type) from dbgroup;】查询type不同种类，比如type有password和diary两种，就返回2;
  */
-- (NSMutableArray *)findAllDatasWithSQL:(NSString *)sql class:(Class)className tableName:(NSString *)tableName;
-
-// 检查表是否存在
-- (BOOL)checkTableExistWithTableNamed:(NSString *)tableName;
-
-// 获取表名的所有数据数量
-- (int)countForTable:(NSString *)tableName;
+- (int)countWithSQL:(NSString *)sql table:(NSString *)table;
 
 // 获取数据库中所有表名
 - (NSArray<NSString *> *)allTables;

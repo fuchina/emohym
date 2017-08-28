@@ -25,14 +25,42 @@ static CGRect oldframe;
 
 @implementation FSKit
 
-+ (void)presentAlertViewController:(UIAlertController *)alertController completion:(void (^)(void))completion{
+NSTimeInterval FSTimeIntevalSince1970(void){
+    return [[NSDate date] timeIntervalSince1970];
+}
+
+NSInteger FSIntegerTimeIntevalSince1970(void){
+    return (NSInteger)[[NSDate date] timeIntervalSince1970];
+}
+
++ (void)presentViewController:(UIViewController *)pController completion:(void (^)(void))completion{
+    if (![pController isKindOfClass:[UIViewController class]]) {
+        return;
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-        UIViewController *controller = keyWindow.rootViewController;
-        while (controller.presentedViewController) {
-            controller = controller.presentedViewController;
+        UIWindow *w = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        w.windowLevel = UIWindowLevelAlert;
+        w.hidden = NO;
+        w.rootViewController = [[UIViewController alloc] init];
+        [w.rootViewController presentViewController:pController animated:YES completion:completion];
+        
+        /*
+        NSArray *windows = [UIApplication sharedApplication].windows;
+        UIWindow *lastObject = nil;
+        for (int x = (int)windows.count - 1; x >= 0; x --) {
+            lastObject = windows[x];
+            if (!lastObject.hidden) {
+                break;
+            }
         }
-        [controller presentViewController:alertController animated:YES completion:completion];
+        UIViewController *controller = lastObject.rootViewController;
+        while (controller.presentedViewController) {
+            if (controller.presentedViewController != pController) {
+                controller = controller.presentedViewController;
+            }
+        }
+        [controller presentViewController:pController animated:YES completion:completion];
+         */
     });
 }
 
@@ -51,7 +79,7 @@ static CGRect oldframe;
     }
     UIAlertAction *archiveAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:cancel];
     [controller addAction:archiveAction];
-    [self presentAlertViewController:controller completion:completion];
+    [self presentViewController:controller completion:completion];
 }
 
 + (void)alertInput:(NSInteger)number title:(NSString *)title message:(NSString *)message ok:(NSString *)okTitle handler:(void (^)(UIAlertController *bAlert,UIAlertAction *action))handler cancel:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler textFieldConifg:(void (^)(UITextField *textField))configurationHandler completion:(void (^)(void))completion{
@@ -75,7 +103,7 @@ static CGRect oldframe;
     }];
     [alertController addAction:cancelAction];
     [alertController addAction:okAction];
-    [self presentAlertViewController:alertController completion:completion];
+    [self presentViewController:alertController completion:completion];
 }
 
 + (void)pushToViewControllerWithClass:(NSString *)className navigationController:(UINavigationController *)navigationController param:(NSDictionary *)param configBlock:(void (^)(id vc))configBlockParam{
@@ -734,6 +762,27 @@ static CGRect oldframe;
     if ([object respondsToSelector:setterSelector]) {
         [object performSelector:setterSelector onThread:[NSThread currentThread] withObject:value waitUntilDone:[NSThread isMainThread]];
     }
+}
+
++ (id)entity:(Class)Entity dic:(NSDictionary *)dic{
+    if (Entity == nil) {
+        return nil;
+    }
+    NSArray *properties = [self propertiesForClass:Entity];
+    id instance = [[Entity alloc] init];
+    for (NSString *p in properties) {
+        [self setValue:@"" forPropertyName:p ofObject:instance];
+    }
+    if (![self isValidateDictionary:dic]) {
+        NSArray *keys = [dic allKeys];
+        for (NSString *key in keys) {
+            id value = dic[key];
+            if (value) {
+                [self setValue:value forPropertyName:key ofObject:instance];
+            }
+        }
+    }
+    return Entity;
 }
 
 + (NSString *)valueForGetSelectorWithPropertyName:(NSString *)name object:(id)instance{
@@ -2871,17 +2920,23 @@ static CGRect oldframe;
     return hexData;
 }
 
-+ (NSString *)readableForTimeInterval:(NSTimeInterval)timeInterval{
-    NSDate *bDate = [[NSDate alloc] initWithTimeIntervalSince1970:timeInterval];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-    return [formatter stringFromDate:bDate];
-}
-
 + (NSString *)stringWithDate:(NSDate *)date formatter:(NSString *)formatter{
+    if (![date isKindOfClass:[NSDate class]]) {
+        return nil;
+    }
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:formatter?:@"yyyy-MM-dd HH:mm:ss"];
     return [dateFormatter stringFromDate:date];
+}
+
++ (NSDate *)dateByString:(NSString *)str formatter:(NSString *)formatter{
+    if (!([self isValidateString:str] && [FSKit isValidateString:formatter])) {
+        return nil;
+    }
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:formatter?:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *date = [dateFormatter dateFromString:str];
+    return date;
 }
 
 + (NSAttributedString *)attributedStringFor:(NSString *)sourceString colorRange:(NSArray *)colorRanges color:(UIColor *)color textRange:(NSArray *)textRanges font:(UIFont *)font{

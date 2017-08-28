@@ -173,6 +173,7 @@
 		5C04271C1F15CBB9004AC010 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5C0426591F15CBB8004AC010 /* README.md */; };
 		5C04271D1F15CBB9004AC010 /* FuWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04265D1F15CBB8004AC010 /* FuWeb.m */; };
 		5C0427201F15D136004AC010 /* FSShopClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04271F1F15D136004AC010 /* FSShopClassView.m */; };
+		5C0AFFD11F541A8500FED4FA /* FSCryptorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */; };
 		5C36556B1F46B9B90035D26B /* FSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36556A1F46B9B90035D26B /* FSToast.m */; };
 		5C406B7A1F457BB7000A9F21 /* FSAddUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B6F1F457BB7000A9F21 /* FSAddUrlController.m */; };
 		5C406B7B1F457BB7000A9F21 /* FSDemoUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B711F457BB7000A9F21 /* FSDemoUrlController.m */; };
@@ -560,6 +561,8 @@
 		5C04265D1F15CBB8004AC010 /* FuWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuWeb.m; sourceTree = "<group>"; };
 		5C04271E1F15D136004AC010 /* FSShopClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShopClassView.h; sourceTree = "<group>"; };
 		5C04271F1F15D136004AC010 /* FSShopClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShopClassView.m; sourceTree = "<group>"; };
+		5C0AFFCF1F541A8500FED4FA /* FSCryptorSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCryptorSupport.h; sourceTree = "<group>"; };
+		5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCryptorSupport.m; sourceTree = "<group>"; };
 		5C3655691F46B9B90035D26B /* FSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSToast.h; sourceTree = "<group>"; };
 		5C36556A1F46B9B90035D26B /* FSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSToast.m; sourceTree = "<group>"; };
 		5C406B6E1F457BB7000A9F21 /* FSAddUrlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAddUrlController.h; sourceTree = "<group>"; };
@@ -897,6 +900,8 @@
 				5C0425391F15CBB8004AC010 /* 3rd */,
 				5C0425401F15CBB8004AC010 /* FSCryptor.h */,
 				5C0425411F15CBB8004AC010 /* FSCryptor.m */,
+				5C0AFFCF1F541A8500FED4FA /* FSCryptorSupport.h */,
+				5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */,
 				5C0425421F15CBB8004AC010 /* keys */,
 			);
 			path = RSA;
@@ -2026,6 +2031,7 @@
 				5C36556B1F46B9B90035D26B /* FSToast.m in Sources */,
 				71474B6A1DCABB1C0063DA08 /* ARTabBarController.m in Sources */,
 				5C0427161F15CBB9004AC010 /* FSTaxDetailView.m in Sources */,
+				5C0AFFD11F541A8500FED4FA /* FSCryptorSupport.m in Sources */,
 				5C0426B51F15CBB8004AC010 /* FSLocationController.m in Sources */,
 				5C0427011F15CBB8004AC010 /* FSCalculatorController.m in Sources */,
 				5C04271C1F15CBB9004AC010 /* README.md in Sources */,

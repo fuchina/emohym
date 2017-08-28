@@ -11,6 +11,11 @@
 
 @interface FSKit : NSObject
 
+extern  NSTimeInterval FSTimeIntevalSince1970(void);
+extern NSInteger FSIntegerTimeIntevalSince1970(void);
+
++ (void)presentViewController:(UIViewController *)pController completion:(void (^)(void))completion;
+
 + (void)userDefaultsKeepData:(id)instance  withKey:(NSString *)key;
 + (id)userDefaultsDataWithKey:(NSString *)key;
 + (id)objectFromJSonstring:(NSString *)jsonString;
@@ -168,8 +173,8 @@
 + (NSString *)scanQRCode:(UIImage *)image;  // 解析二维码
 + (NSString *)dataToHex:(NSData *)data;
 + (NSData *)convertHexStrToData:(NSString *)str;
-+ (NSString *)readableForTimeInterval:(NSTimeInterval)timeInterval;
 + (NSString *)stringWithDate:(NSDate *)date formatter:(NSString *)formatter;
++ (NSDate *)dateByString:(NSString *)str formatter:(NSString *)formatter;
 
 /*  NSAttributedString *connectAttributedString = [FuData attributedStringFor:connectString colorRange:@[[NSValue valueWithRange:connectRange]] color:GZS_RedColor textRange:@[[NSValue valueWithRange:connectRange]] font:FONTFC(25)];*/
 + (NSAttributedString *)attributedStringFor:(NSString *)sourceString colorRange:(NSArray *)colorRanges color:(UIColor *)color textRange:(NSArray *)textRanges font:(UIFont *)font;
@@ -231,6 +236,7 @@
 + (NSArray<NSString *> *)propertiesForClass:(Class)className;   // 获取类的所有属性
 + (SEL)setterSELWithAttibuteName:(NSString*)attributeName;      // 将字符串转化为Set方法，如将"name"转化为setName方法
 + (void)setValue:(id)value forPropertyName:(NSString *)name ofObject:(id)object;    // 给对象的属性赋值
++ (id)entity:(Class)instance dic:(NSDictionary *)dic;           
 + (NSString *)valueForGetSelectorWithPropertyName:(NSString *)name object:(id)instance;  // 获取实例的属性的值
 
 + (NSDictionary *)keyedUnarchiverWithDictionary:(NSString *)fileName;

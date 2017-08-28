@@ -10,6 +10,9 @@
 #import <sqlite3.h>
 #import <FSKit.h>
 
+static NSString     *_field_name = @"field_name";
+static NSString     *_field_type = @"field_type";
+
 @interface FSDBMaster ()
 
 @property (nonatomic,assign) sqlite3   *sqlite3;
@@ -86,19 +89,21 @@ static FSDBMaster *_instance = nil;
     return path;
 }
 
-- (void)createTable:(NSString *)tableName className:(Class)className{
-    if (className == nil) {
+- (void)createTableIfNotExists:(NSString *)tableName className:(Class)className{
+    if (![FSKit isValidateString:tableName]) {
         return;
     }
-    
-    BOOL exist = [self checkTableExistWithTableNamed:tableName];
+    BOOL exist = [self checkTableExist:tableName];
     if (exist) {
         return;
     }
-    
     NSArray *properties = [FSKit propertiesForClass:className];
-    NSMutableString *append = [[NSMutableString alloc] init];
-    
+    if (!properties.count) {
+        return;
+    }
+    NSString *aid = @"aid";
+    NSString *primaryKey = [[NSString alloc] initWithFormat:@"%@ integer PRIMARY KEY autoincrement,",aid];// 因为PRIMARY KEY，id自动是8个字节
+    NSMutableString *append = [[NSMutableString alloc] initWithString:primaryKey];
     NSArray *keywords = [self keywords];
     for (int x = 0; x < properties.count; x ++) {
         NSString *name = properties[x];
@@ -106,9 +111,10 @@ static FSDBMaster *_instance = nil;
         if (isKeyword) {
             name = [[NSString alloc] initWithFormat:@"[%@]",name];
         }
-        if (x == 0) {
-            [append appendString:[[NSString alloc] initWithFormat:@"%@ TEXT NOT NULL PRIMARY KEY,",name]];
-        }else if (x == (properties.count - 1)){
+        if ([name isEqualToString:aid]) {
+            continue;
+        }
+        if (x == (properties.count - 1)){
             [append appendString:[[NSString alloc] initWithFormat:@"%@ TEXT NULL",name]];
         }else{
             [append appendString:[[NSString alloc] initWithFormat:@"%@ TEXT NULL,",name]];
@@ -117,15 +123,15 @@ static FSDBMaster *_instance = nil;
     
     // PRIMARY KEY 是唯一的，每条数据不能相同
     //    NSString *sql = @"CREATE TABLE IF NOT EXISTS UserTable ( time TEXT NOT NULL PRIMARY KEY,atype TEXT NOT NULL,btype TEXT NOT NULL,je TEXT,bz TEXT,sr TEXT, cb TEXT, ys TEXT, xj TEXT, ch TEXT, tz TEXT, tx TEXT, fz TEXT);";
-    /*
-     再这里会按照属性列表的顺序排列，可以用于下面从数据库读取数据映射成Entity时对应，但是如果属性列表的顺序变化，就会映射错误。可以保存一份列表顺序，在顺序变动时不会导致映射错误。
-     */
     NSString *sql = [[NSString alloc] initWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (%@);",tableName,append];
     [self execSQL:sql type:@"创建表"];
 }
 
 - (NSString *)insertSQL:(NSString *)sql class:(Class)instance tableName:(NSString *)tableName{
-    [self createTable:tableName className:instance];
+    if (![FSKit isValidateString:tableName]) {
+        return @"表名为空";
+    }
+    [self createTableIfNotExists:tableName className:instance];
     return [self execSQL:sql type:@"新增数据"];
 }
 
@@ -152,44 +158,32 @@ static FSDBMaster *_instance = nil;
     return errMSG;
 }
 
-- (NSMutableArray *)findEntitySQL:(NSString *)sql class:(Class)className tableName:(NSString *)tableName{
-    return [self execSelectSQL:sql class:className tableName:tableName];
+- (NSMutableArray *)querySQL:(NSString *)sql tableName:(NSString *)tableName{
+    return [self execQuerySQL:sql tableName:tableName];
 }
 
-- (NSMutableArray *)findAllDatasWithSQL:(NSString *)sql class:(Class)className tableName:(NSString *)tableName{
-    return [self execSelectSQL:sql class:className tableName:tableName];
-}
-
-- (NSMutableArray *)execSelectSQL:(NSString *)sql class:(Class)className tableName:(NSString *)tableName{
+- (NSMutableArray *)execQuerySQL:(NSString *)sql tableName:(NSString *)tableName{
     if (!([sql isKindOfClass:[NSString class]] && sql.length)) {
-        return nil;
-    }
-    if (!className) {
         return nil;
     }
     if (!([tableName isKindOfClass:[NSString class]] && tableName.length)) {
         return nil;
     }
-    BOOL exist = [self checkTableExistWithTableNamed:tableName];
+    BOOL exist = [self checkTableExist:tableName];
     if (!exist) {
         return nil;
     }
-    
     __block NSMutableArray *mArr = nil;
     dispatch_sync(_queue, ^{
         sqlite3_stmt *stmt = nil;
         int prepare = sqlite3_prepare_v2(_sqlite3, [sql UTF8String], -1, &stmt, NULL);
         if (prepare != SQLITE_OK) {
             sqlite3_finalize(stmt);
-#if  DEBUG
-            [FSKit showMessage:[[NSString alloc] initWithFormat:@"错误码:%@【DEBUG】",@(prepare)]];
-#endif
             return;
         }
-        
         mArr = [[NSMutableArray alloc] init];
         while (sqlite3_step(stmt) == SQLITE_ROW) {
-            id entity = [self entityWithStmt:stmt className:NSStringFromClass(className) tableName:tableName];
+            id entity = [self data:stmt tableName:tableName];
             if (entity) {
                 [mArr addObject:entity];
             }
@@ -206,11 +200,10 @@ static FSDBMaster *_instance = nil;
     if (!([tableName isKindOfClass:[NSString class]] && tableName.length)) {
         return 0;
     }
-    BOOL exist = [self checkTableExistWithTableNamed:tableName];
+    BOOL exist = [self checkTableExist:tableName];
     if (!exist) {
         return 0;
     }
-    
     __block int count = 0;
     dispatch_sync(_queue, ^{
         
@@ -218,12 +211,8 @@ static FSDBMaster *_instance = nil;
         sqlite3_stmt *stmt = nil;
         int prepare = sqlite3_prepare_v2(_sqlite3, [sql UTF8String], -1, &stmt, NULL);
         if (prepare != SQLITE_OK) {
-#if DEBUG
-            [FSKit showMessage:@"准备Stmt失败"];
-#endif
             return;
         }
-        
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             count += sqlite3_column_int(stmt, 0);
         }
@@ -232,8 +221,58 @@ static FSDBMaster *_instance = nil;
     return count;
 }
 
+- (int)countWithSQL:(NSString *)sql table:(NSString *)tableName{
+    if (!([tableName isKindOfClass:[NSString class]] && tableName.length)) {
+        return 0;
+    }
+    BOOL exist = [self checkTableExist:tableName];
+    if (!exist) {
+        return 0;
+    }
+    if (!([sql isKindOfClass:[NSString class]] && sql.length)) {
+        return 0;
+    }
+    __block int count = 0;
+    dispatch_sync(_queue, ^{
+        sqlite3_stmt *stmt = nil;
+        int prepare = sqlite3_prepare_v2(_sqlite3, [sql UTF8String], -1, &stmt, NULL);
+        if (prepare != SQLITE_OK) {
+            return;
+        }
+        while (sqlite3_step(stmt) == SQLITE_ROW) {
+            count += sqlite3_column_int(stmt, 0);
+        }
+        sqlite3_finalize(stmt);
+    });
+    return count;
+}
+
+- (BOOL)checkTableExist:(NSString *)tableName{
+    if (!([tableName isKindOfClass:[NSString class]] && tableName.length)) {
+        return NO;
+    }
+    __block NSInteger success = 0;
+    dispatch_sync(_queue, ^{
+        sqlite3_stmt *statement;
+        NSString *sql = [NSString stringWithFormat:@"SELECT COUNT(*) FROM sqlite_master where type='table' and name='%@';",tableName];
+        const char *sql_stmt = [sql UTF8String];
+        if (sqlite3_prepare_v2(_sqlite3, sql_stmt, -1, &statement, nil) == SQLITE_OK) {
+            @try {
+                while (sqlite3_step(statement) == SQLITE_ROW) {
+                    success += sqlite3_column_int(statement, 0);
+                }
+            } @catch (NSException *exception) {
+
+            } @finally {
+                sqlite3_finalize(statement);
+            }
+        }
+    });
+    return success > 0;
+}
+
 - (BOOL)checkTableExistWithTableNamed:(NSString *)tableName{
-    if (tableName.length == 0) {
+    if (!([tableName isKindOfClass:[NSString class]] && tableName.length)) {
         return NO;
     }
     __block BOOL success = NO;
@@ -278,30 +317,39 @@ int checkTableCallBack(void *param, int f_num, char **f_value, char **f_name){
     return 0;
 }
 
-- (id)entityWithStmt:(sqlite3_stmt *)stmt className:(NSString *)className tableName:(NSString *)tableName{
-    if (className.length == 0) {
-        return nil;
-    }
-    Class Entity = NSClassFromString(className);
-    id ps = [[Entity alloc] init];
-    NSArray *fields = [self tableFieldNames:tableName];
-    for (int x = 0; x < fields.count; x ++) {
-        const char *charValue = (const char*)sqlite3_column_text(stmt, x);
-        NSString *value = [NSString stringWithUTF8String:charValue?:""];
-        
-        NSDictionary *dic = fields[x];
-        NSString *name = [dic allKeys][0];
-        
-        SEL setterSelector = [FSKit setterSELWithAttibuteName:name];
-        if ([ps respondsToSelector:setterSelector]) {
-            [ps performSelector:setterSelector onThread:[NSThread currentThread] withObject:value waitUntilDone:YES];
+// 要返回一条数据中的所有字段及其值
+- (NSDictionary *)data:(sqlite3_stmt *)stmt tableName:(NSString *)tableName{
+    NSMutableDictionary *last = [[NSMutableDictionary alloc] init];
+    int count = sqlite3_column_count(stmt);
+    for (int x = 0; x < count; x ++) {
+        const char *cname = sqlite3_column_name(stmt, x);
+        if (cname == NULL) {
+            continue;
         }
+        NSString *name = [[NSString alloc] initWithUTF8String:cname];
+        
+        int cType = sqlite3_column_type(stmt, x);
+        id str = @"";
+        if (cType == SQLITE_TEXT) {
+            const char *cValue = (char *)sqlite3_column_text(stmt, x);
+            if (cValue != NULL) {
+                str = [[NSString alloc] initWithUTF8String:cValue];// 如果charValue为NULL会Crash
+            }
+        }else if (cType == SQLITE_BLOB || cType == SQLITE_NULL){
+        }else if (cType == SQLITE_INTEGER){
+            int cValue = sqlite3_column_int(stmt,x);
+            str = @(cValue);
+        }else if (cType == SQLITE_FLOAT){
+            float cValue = sqlite3_column_double(stmt, x);
+            str = @(cValue);
+        }
+        [last setObject:str forKey:name];
     }
-    return ps;
+    return last;
 }
 
 //获取表中所有字段名和类型
--(NSArray<NSDictionary *> *)tableFieldNames:(NSString *)tableName{
+- (NSArray<NSDictionary *> *)allFields:(NSString *)tableName{
     NSMutableArray *array = [[NSMutableArray alloc] init];
     NSString *getColumn = [NSString stringWithFormat:@"PRAGMA table_info(%@)",tableName];
     sqlite3_stmt *statement;
@@ -311,7 +359,7 @@ int checkTableCallBack(void *param, int f_num, char **f_value, char **f_name){
         NSString *columnName = [[NSString alloc] initWithUTF8String:nameData];
         char *typeData = (char *)sqlite3_column_text(statement, 2);
         NSString *columntype = [NSString stringWithCString:typeData encoding:NSUTF8StringEncoding];
-        NSDictionary *dic = @{columnName:columntype};
+        NSDictionary *dic = @{_field_name:columnName,_field_type:[columntype lowercaseString]};
         [array addObject:dic];
     }
     sqlite3_finalize(statement);
