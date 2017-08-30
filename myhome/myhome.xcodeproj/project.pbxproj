@@ -149,8 +149,6 @@
 		5C0427041F15CBB8004AC010 /* FSShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04262D1F15CBB8004AC010 /* FSShowView.m */; };
 		5C0427051F15CBB8004AC010 /* PHTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0426301F15CBB8004AC010 /* PHTextView.m */; };
 		5C0427061F15CBB8004AC010 /* FSDetailPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0426331F15CBB8004AC010 /* FSDetailPwdController.m */; };
-		5C0427071F15CBB8004AC010 /* FSPwdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0426351F15CBB8004AC010 /* FSPwdModel.m */; };
-		5C0427081F15CBB8004AC010 /* FSPwdProtectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0426371F15CBB8004AC010 /* FSPwdProtectController.m */; };
 		5C0427091F15CBB8004AC010 /* FSMakeQRController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04263A1F15CBB8004AC010 /* FSMakeQRController.m */; };
 		5C04270A1F15CBB8004AC010 /* fsqr1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C04263B1F15CBB8004AC010 /* fsqr1.png */; };
 		5C04270B1F15CBB8004AC010 /* fsqr2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C04263C1F15CBB8004AC010 /* fsqr2.png */; };
@@ -173,8 +171,14 @@
 		5C04271C1F15CBB9004AC010 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5C0426591F15CBB8004AC010 /* README.md */; };
 		5C04271D1F15CBB9004AC010 /* FuWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04265D1F15CBB8004AC010 /* FuWeb.m */; };
 		5C0427201F15D136004AC010 /* FSShopClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C04271F1F15D136004AC010 /* FSShopClassView.m */; };
+		5C046E191F565A71005531FF /* FSABNameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C046E141F565A71005531FF /* FSABNameModel.m */; };
+		5C046E1A1F565A71005531FF /* FSDBFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C046E161F565A71005531FF /* FSDBFlowCell.m */; };
+		5C046E1B1F565A71005531FF /* FSDBFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C046E181F565A71005531FF /* FSDBFlowController.m */; };
 		5C0AFFD11F541A8500FED4FA /* FSCryptorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */; };
 		5C36556B1F46B9B90035D26B /* FSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36556A1F46B9B90035D26B /* FSToast.m */; };
+		5C3DD5A91F5509D500D488C5 /* FSNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3DD5A81F5509D500D488C5 /* FSNoteView.m */; };
+		5C3DD5AD1F550B1C00D488C5 /* FSShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3DD5AC1F550B1C00D488C5 /* FSShare.m */; };
+		5C3DD5B61F55615900D488C5 /* FSDBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3DD5B51F55615900D488C5 /* FSDBSupport.m */; };
 		5C406B7A1F457BB7000A9F21 /* FSAddUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B6F1F457BB7000A9F21 /* FSAddUrlController.m */; };
 		5C406B7B1F457BB7000A9F21 /* FSDemoUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B711F457BB7000A9F21 /* FSDemoUrlController.m */; };
 		5C406B7C1F457BB7000A9F21 /* FSInputTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B731F457BB7000A9F21 /* FSInputTableView.m */; };
@@ -225,8 +229,6 @@
 		5CD7E2341F42957E00358620 /* FSTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7E2331F42957E00358620 /* FSTextViewController.m */; };
 		5CD7E2371F4295E900358620 /* FSPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7E2361F4295E900358620 /* FSPasswordController.m */; };
 		5CD7E23F1F4295F100358620 /* FSAddPwdBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7E23A1F4295F100358620 /* FSAddPwdBookController.m */; };
-		5CD7E2401F4295F100358620 /* FSPwdBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7E23C1F4295F100358620 /* FSPwdBookController.m */; };
-		5CD7E2411F4295F100358620 /* FSPwdBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7E23E1F4295F100358620 /* FSPwdBookModel.m */; };
 		5CF049771F3473EC00CF239D /* FSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF049741F3473EC00CF239D /* FSLabel.m */; };
 		5CF049781F3473EC00CF239D /* FSVanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF049761F3473EC00CF239D /* FSVanView.m */; };
 		5CFE601A1DC75B9C003640A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE60191DC75B9C003640A4 /* main.m */; };
@@ -522,10 +524,6 @@
 		5C0426301F15CBB8004AC010 /* PHTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTextView.m; sourceTree = "<group>"; };
 		5C0426321F15CBB8004AC010 /* FSDetailPwdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDetailPwdController.h; sourceTree = "<group>"; };
 		5C0426331F15CBB8004AC010 /* FSDetailPwdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDetailPwdController.m; sourceTree = "<group>"; };
-		5C0426341F15CBB8004AC010 /* FSPwdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPwdModel.h; sourceTree = "<group>"; };
-		5C0426351F15CBB8004AC010 /* FSPwdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPwdModel.m; sourceTree = "<group>"; };
-		5C0426361F15CBB8004AC010 /* FSPwdProtectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPwdProtectController.h; sourceTree = "<group>"; };
-		5C0426371F15CBB8004AC010 /* FSPwdProtectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPwdProtectController.m; sourceTree = "<group>"; };
 		5C0426391F15CBB8004AC010 /* FSMakeQRController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMakeQRController.h; sourceTree = "<group>"; };
 		5C04263A1F15CBB8004AC010 /* FSMakeQRController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMakeQRController.m; sourceTree = "<group>"; };
 		5C04263B1F15CBB8004AC010 /* fsqr1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fsqr1.png; sourceTree = "<group>"; };
@@ -561,10 +559,22 @@
 		5C04265D1F15CBB8004AC010 /* FuWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuWeb.m; sourceTree = "<group>"; };
 		5C04271E1F15D136004AC010 /* FSShopClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShopClassView.h; sourceTree = "<group>"; };
 		5C04271F1F15D136004AC010 /* FSShopClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShopClassView.m; sourceTree = "<group>"; };
+		5C046E131F565A71005531FF /* FSABNameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSABNameModel.h; sourceTree = "<group>"; };
+		5C046E141F565A71005531FF /* FSABNameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSABNameModel.m; sourceTree = "<group>"; };
+		5C046E151F565A71005531FF /* FSDBFlowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBFlowCell.h; sourceTree = "<group>"; };
+		5C046E161F565A71005531FF /* FSDBFlowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBFlowCell.m; sourceTree = "<group>"; };
+		5C046E171F565A71005531FF /* FSDBFlowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBFlowController.h; sourceTree = "<group>"; };
+		5C046E181F565A71005531FF /* FSDBFlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBFlowController.m; sourceTree = "<group>"; };
 		5C0AFFCF1F541A8500FED4FA /* FSCryptorSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCryptorSupport.h; sourceTree = "<group>"; };
 		5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCryptorSupport.m; sourceTree = "<group>"; };
 		5C3655691F46B9B90035D26B /* FSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSToast.h; sourceTree = "<group>"; };
 		5C36556A1F46B9B90035D26B /* FSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSToast.m; sourceTree = "<group>"; };
+		5C3DD5A71F5509D500D488C5 /* FSNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNoteView.h; sourceTree = "<group>"; };
+		5C3DD5A81F5509D500D488C5 /* FSNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSNoteView.m; sourceTree = "<group>"; };
+		5C3DD5AB1F550B1C00D488C5 /* FSShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShare.h; sourceTree = "<group>"; };
+		5C3DD5AC1F550B1C00D488C5 /* FSShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShare.m; sourceTree = "<group>"; };
+		5C3DD5B41F55615900D488C5 /* FSDBSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBSupport.h; sourceTree = "<group>"; };
+		5C3DD5B51F55615900D488C5 /* FSDBSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBSupport.m; sourceTree = "<group>"; };
 		5C406B6E1F457BB7000A9F21 /* FSAddUrlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAddUrlController.h; sourceTree = "<group>"; };
 		5C406B6F1F457BB7000A9F21 /* FSAddUrlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAddUrlController.m; sourceTree = "<group>"; };
 		5C406B701F457BB7000A9F21 /* FSDemoUrlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDemoUrlController.h; sourceTree = "<group>"; };
@@ -661,10 +671,6 @@
 		5CD7E2361F4295E900358620 /* FSPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPasswordController.m; sourceTree = "<group>"; };
 		5CD7E2391F4295F100358620 /* FSAddPwdBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAddPwdBookController.h; sourceTree = "<group>"; };
 		5CD7E23A1F4295F100358620 /* FSAddPwdBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAddPwdBookController.m; sourceTree = "<group>"; };
-		5CD7E23B1F4295F100358620 /* FSPwdBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPwdBookController.h; sourceTree = "<group>"; };
-		5CD7E23C1F4295F100358620 /* FSPwdBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPwdBookController.m; sourceTree = "<group>"; };
-		5CD7E23D1F4295F100358620 /* FSPwdBookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPwdBookModel.h; sourceTree = "<group>"; };
-		5CD7E23E1F4295F100358620 /* FSPwdBookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPwdBookModel.m; sourceTree = "<group>"; };
 		5CF049731F3473EC00CF239D /* FSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLabel.h; sourceTree = "<group>"; };
 		5CF049741F3473EC00CF239D /* FSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLabel.m; sourceTree = "<group>"; };
 		5CF049751F3473EC00CF239D /* FSVanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVanView.h; sourceTree = "<group>"; };
@@ -816,6 +822,8 @@
 				5C0424FE1F15CBB8004AC010 /* FSDBAccount */,
 				5C04250B1F15CBB8004AC010 /* FSDBTool.h */,
 				5C04250C1F15CBB8004AC010 /* FSDBTool.m */,
+				5C3DD5B41F55615900D488C5 /* FSDBSupport.h */,
+				5C3DD5B51F55615900D488C5 /* FSDBSupport.m */,
 				5C04250D1F15CBB8004AC010 /* NewAccount */,
 			);
 			path = FSDBMaster;
@@ -871,6 +879,12 @@
 				5C0425291F15CBB8004AC010 /* FSAddAccountController.m */,
 				5C04252A1F15CBB8004AC010 /* FSAddTrackController.h */,
 				5C04252B1F15CBB8004AC010 /* FSAddTrackController.m */,
+				5C046E131F565A71005531FF /* FSABNameModel.h */,
+				5C046E141F565A71005531FF /* FSABNameModel.m */,
+				5C046E151F565A71005531FF /* FSDBFlowCell.h */,
+				5C046E161F565A71005531FF /* FSDBFlowCell.m */,
+				5C046E171F565A71005531FF /* FSDBFlowController.h */,
+				5C046E181F565A71005531FF /* FSDBFlowController.m */,
 			);
 			path = NewAccount;
 			sourceTree = "<group>";
@@ -947,6 +961,7 @@
 		5C0425511F15CBB8004AC010 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				5C3DD5AA1F550B1C00D488C5 /* Share */,
 				5C0425521F15CBB8004AC010 /* Birthday */,
 				5C04255B1F15CBB8004AC010 /* Diary */,
 				5C0425641F15CBB8004AC010 /* FSAppRun */,
@@ -1324,6 +1339,8 @@
 			children = (
 				5C0426041F15CBB8004AC010 /* FSLockView.h */,
 				5C0426051F15CBB8004AC010 /* FSLockView.m */,
+				5C3DD5A71F5509D500D488C5 /* FSNoteView.h */,
+				5C3DD5A81F5509D500D488C5 /* FSNoteView.m */,
 				5C0426061F15CBB8004AC010 /* FSPwdController.h */,
 				5C0426071F15CBB8004AC010 /* FSPwdController.m */,
 			);
@@ -1415,10 +1432,6 @@
 				5CD7E2381F4295F100358620 /* PwdBook */,
 				5C0426321F15CBB8004AC010 /* FSDetailPwdController.h */,
 				5C0426331F15CBB8004AC010 /* FSDetailPwdController.m */,
-				5C0426341F15CBB8004AC010 /* FSPwdModel.h */,
-				5C0426351F15CBB8004AC010 /* FSPwdModel.m */,
-				5C0426361F15CBB8004AC010 /* FSPwdProtectController.h */,
-				5C0426371F15CBB8004AC010 /* FSPwdProtectController.m */,
 				5CD7E2351F4295E900358620 /* FSPasswordController.h */,
 				5CD7E2361F4295E900358620 /* FSPasswordController.m */,
 			);
@@ -1489,6 +1502,15 @@
 				5C04265D1F15CBB8004AC010 /* FuWeb.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		5C3DD5AA1F550B1C00D488C5 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				5C3DD5AB1F550B1C00D488C5 /* FSShare.h */,
+				5C3DD5AC1F550B1C00D488C5 /* FSShare.m */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 		5C83D7791F309BFD00A13A2E /* ViewForFSKit */ = {
@@ -1648,10 +1670,6 @@
 			children = (
 				5CD7E2391F4295F100358620 /* FSAddPwdBookController.h */,
 				5CD7E23A1F4295F100358620 /* FSAddPwdBookController.m */,
-				5CD7E23B1F4295F100358620 /* FSPwdBookController.h */,
-				5CD7E23C1F4295F100358620 /* FSPwdBookController.m */,
-				5CD7E23D1F4295F100358620 /* FSPwdBookModel.h */,
-				5CD7E23E1F4295F100358620 /* FSPwdBookModel.m */,
 			);
 			path = PwdBook;
 			sourceTree = "<group>";
@@ -1895,6 +1913,7 @@
 				5C0426911F15CBB8004AC010 /* FSABUpdateController.m in Sources */,
 				5C04267B1F15CBB8004AC010 /* CYDatetime.m in Sources */,
 				5C0426DA1F15CBB8004AC010 /* FSNetsController.m in Sources */,
+				5C046E1B1F565A71005531FF /* FSDBFlowController.m in Sources */,
 				5C0426D81F15CBB8004AC010 /* FSGridController.m in Sources */,
 				5C0426E91F15CBB8004AC010 /* FSMoreZoneImageCell.m in Sources */,
 				5C0426B81F15CBB8004AC010 /* FSBalanceController.m in Sources */,
@@ -1902,8 +1921,8 @@
 				5C0426A91F15CBB8004AC010 /* FSBirthdayController.m in Sources */,
 				5C0426E01F15CBB8004AC010 /* FSImagePickerController.m in Sources */,
 				5C0426791F15CBB8004AC010 /* FSChineseCalendarController.m in Sources */,
+				5C3DD5A91F5509D500D488C5 /* FSNoteView.m in Sources */,
 				5C04269C1F15CBB8004AC010 /* RSA.m in Sources */,
-				5C0427081F15CBB8004AC010 /* FSPwdProtectController.m in Sources */,
 				5C4B3BA51F39D64100E9B152 /* FSSeaController.m in Sources */,
 				5C0426D01F15CBB8004AC010 /* FSTapLabel.m in Sources */,
 				5C04271D1F15CBB9004AC010 /* FuWeb.m in Sources */,
@@ -1916,6 +1935,7 @@
 				5C0426DE1F15CBB8004AC010 /* FSCountButton.m in Sources */,
 				5C0426AE1F15CBB8004AC010 /* FSAppRunState.m in Sources */,
 				5C0426A21F15CBB8004AC010 /* UIView+Addition.m in Sources */,
+				5C3DD5AD1F550B1C00D488C5 /* FSShare.m in Sources */,
 				5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */,
 				5C4259AC1F50405900DAED6A /* CSPMessageController.m in Sources */,
 				5C0426741F15CBB8004AC010 /* ChineseCalendarView.m in Sources */,
@@ -1937,6 +1957,7 @@
 				5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */,
 				5C0427041F15CBB8004AC010 /* FSShowView.m in Sources */,
 				5C9338011DCB447B0091D3D8 /* WTShareContentItem.m in Sources */,
+				5C046E1A1F565A71005531FF /* FSDBFlowCell.m in Sources */,
 				5C0426A41F15CBB8004AC010 /* UIViewExt.m in Sources */,
 				5C0427131F15CBB9004AC010 /* FSQRResultController.m in Sources */,
 				5C04267D1F15CBB8004AC010 /* ClipPictureController.m in Sources */,
@@ -2000,9 +2021,11 @@
 				5C0426DF1F15CBB8004AC010 /* FSImagePicker.m in Sources */,
 				5C0426A81F15CBB8004AC010 /* FSAllBirthdayController.m in Sources */,
 				5C0426F01F15CBB8004AC010 /* FSSelectController.m in Sources */,
+				5C046E191F565A71005531FF /* FSABNameModel.m in Sources */,
 				5C406B7D1F457BB7000A9F21 /* FSNetModel.m in Sources */,
 				5C0426941F15CBB8004AC010 /* FSAddAccountController.m in Sources */,
 				5C0426921F15CBB8004AC010 /* FSAccountListController.m in Sources */,
+				5C3DD5B61F55615900D488C5 /* FSDBSupport.m in Sources */,
 				5C0426C91F15CBB8004AC010 /* FSSafeContactController.m in Sources */,
 				5C0426D21F15CBB8004AC010 /* FSWBView.m in Sources */,
 				5C0426F51F15CBB8004AC010 /* FIWebView.m in Sources */,
@@ -2017,10 +2040,8 @@
 				5C0426951F15CBB8004AC010 /* FSAddTrackController.m in Sources */,
 				5C0426E41F15CBB8004AC010 /* FSBeyondButton.m in Sources */,
 				5C0426821F15CBB8004AC010 /* FSFMExpectController.m in Sources */,
-				5C0427071F15CBB8004AC010 /* FSPwdModel.m in Sources */,
 				5C0426E51F15CBB8004AC010 /* FSButtonLabel.m in Sources */,
 				5C0426C21F15CBB8004AC010 /* UIView+ViewController.m in Sources */,
-				5CD7E2401F4295F100358620 /* FSPwdBookController.m in Sources */,
 				5C0426DC1F15CBB8004AC010 /* FSLocation.m in Sources */,
 				5C04268E1F15CBB8004AC010 /* FSABTrackController.m in Sources */,
 				5C04269B1F15CBB8004AC010 /* KRAes.m in Sources */,
@@ -2048,7 +2069,6 @@
 				5C0426D61F15CBB8004AC010 /* NSObject+NetworkStateOrRSSI.m in Sources */,
 				5C0426FD1F15CBB8004AC010 /* FSRelayoutCell.m in Sources */,
 				5C0426A61F15CBB8004AC010 /* FSABBirthModel.m in Sources */,
-				5CD7E2411F4295F100358620 /* FSPwdBookModel.m in Sources */,
 				5C0427091F15CBB8004AC010 /* FSMakeQRController.m in Sources */,
 				5C406B821F4595CA000A9F21 /* FSHalfView.m in Sources */,
 				5C0426EB1F15CBB8004AC010 /* FSZoneImageController.m in Sources */,

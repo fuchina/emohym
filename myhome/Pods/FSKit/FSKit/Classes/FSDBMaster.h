@@ -43,6 +43,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "FSKit.h"
 
 #define FSDBMaster_DBName       @"FSDBMasterDB"
 
@@ -68,7 +69,7 @@
 
 /*
  新增 eg.
- @"INSERT INTO %@ (time,name,loti,lati) VALUES (\"%@\",\"%@\",\"%@\",\"%@\");"];
+ @"INSERT INTO %@ (time,name,loti,lati) VALUES (\"%@\",\"%@\",\"%@\",\"%@\");";
  */
 - (NSString *)insertSQL:(NSString *)sql class:(Class)instance tableName:(NSString *)tableName;
 /*

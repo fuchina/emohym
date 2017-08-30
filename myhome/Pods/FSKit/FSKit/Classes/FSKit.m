@@ -33,16 +33,22 @@ NSInteger FSIntegerTimeIntevalSince1970(void){
     return (NSInteger)[[NSDate date] timeIntervalSince1970];
 }
 
++ (UIViewController *)presentViewController{
+    UIWindow *lastObject = [UIApplication sharedApplication].keyWindow;
+    UIViewController *controller = lastObject.rootViewController;
+    while (controller.presentedViewController) {
+        controller = controller.presentedViewController;
+    }
+    return controller;
+}
+
 + (void)presentViewController:(UIViewController *)pController completion:(void (^)(void))completion{
     if (![pController isKindOfClass:[UIViewController class]]) {
         return;
     }
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIWindow *w = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        w.windowLevel = UIWindowLevelAlert;
-        w.hidden = NO;
-        w.rootViewController = [[UIViewController alloc] init];
-        [w.rootViewController presentViewController:pController animated:YES completion:completion];
+        UIViewController *controller = [self presentViewController ];
+        [controller presentViewController:pController animated:YES completion:completion];
         
         /*
         NSArray *windows = [UIApplication sharedApplication].windows;
@@ -65,7 +71,14 @@ NSInteger FSIntegerTimeIntevalSince1970(void){
 }
 
 + (void)alert:(UIAlertControllerStyle)style title:(NSString *)title message:(NSString *)message actionTitles:(NSArray<NSString *> *)titles styles:(NSArray<NSNumber *> *)styles handler:(void (^)(UIAlertAction *action))handler cancelTitle:(NSString *)cancelTitle cancel:(void (^)(UIAlertAction *action))cancel completion:(void (^)(void))completion{
+    [self alert:style controller:[self presentViewController] title:title message:message actionTitles:titles styles:styles handler:handler cancelTitle:cancelTitle cancel:cancel completion:completion];
+}
+
++ (void)alert:(UIAlertControllerStyle)style controller:(UIViewController *)pController title:(NSString *)title message:(NSString *)message actionTitles:(NSArray<NSString *> *)titles styles:(NSArray<NSNumber *> *)styles handler:(void (^)(UIAlertAction *action))handler cancelTitle:(NSString *)cancelTitle cancel:(void (^)(UIAlertAction *action))cancel completion:(void (^)(void))completion{
     if (titles.count != styles.count) {
+        return;
+    }
+    if (![pController isKindOfClass:[UIViewController class]]) {
         return;
     }
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:style];
@@ -79,7 +92,7 @@ NSInteger FSIntegerTimeIntevalSince1970(void){
     }
     UIAlertAction *archiveAction = [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:cancel];
     [controller addAction:archiveAction];
-    [self presentViewController:controller completion:completion];
+    [pController presentViewController:controller animated:YES completion:completion];
 }
 
 + (void)alertInput:(NSInteger)number title:(NSString *)title message:(NSString *)message ok:(NSString *)okTitle handler:(void (^)(UIAlertController *bAlert,UIAlertAction *action))handler cancel:(NSString *)cancelTitle handler:(void (^)(UIAlertAction *action))cancelHandler textFieldConifg:(void (^)(UITextField *textField))configurationHandler completion:(void (^)(void))completion{
@@ -741,26 +754,32 @@ NSInteger FSIntegerTimeIntevalSince1970(void){
     NSMutableArray *array = [[NSMutableArray alloc] init];
     unsigned int propertyCount = 0;
     objc_property_t *properties = class_copyPropertyList(className, &propertyCount);
-    
     for (unsigned int i = 0; i < propertyCount; ++i) {
         objc_property_t property = properties[i];
         const char *name = property_getName(property);//获取属性名字
         NSString *nameToString = [[NSString alloc] initWithFormat:@"%s",name];
         [array addObject:nameToString];
     }
+    free(properties);
     return array;
 }
 
 + (SEL)setterSELWithAttibuteName:(NSString*)attributeName{
+    if (![self isValidateString:attributeName]) {
+        return nil;
+    }
     NSString *capital = [[attributeName substringToIndex:1] uppercaseString];
     NSString *setterSelStr = [NSString stringWithFormat:@"set%@%@:",capital,[attributeName substringFromIndex:1]];
     return NSSelectorFromString(setterSelStr);
 }
 
 + (void)setValue:(id)value forPropertyName:(NSString *)name ofObject:(id)object{
+    if (![self isValidateString:name]) {
+        return;
+    }
     SEL setterSelector = [self setterSELWithAttibuteName:name];
     if ([object respondsToSelector:setterSelector]) {
-        [object performSelector:setterSelector onThread:[NSThread currentThread] withObject:value waitUntilDone:[NSThread isMainThread]];
+        [object performSelector:setterSelector onThread:[NSThread currentThread] withObject:value waitUntilDone:YES];
     }
 }
 
@@ -768,21 +787,15 @@ NSInteger FSIntegerTimeIntevalSince1970(void){
     if (Entity == nil) {
         return nil;
     }
-    NSArray *properties = [self propertiesForClass:Entity];
     id instance = [[Entity alloc] init];
-    for (NSString *p in properties) {
-        [self setValue:@"" forPropertyName:p ofObject:instance];
-    }
-    if (![self isValidateDictionary:dic]) {
+    if ([FSKit isValidateDictionary:dic]) {
         NSArray *keys = [dic allKeys];
         for (NSString *key in keys) {
             id value = dic[key];
-            if (value) {
-                [self setValue:value forPropertyName:key ofObject:instance];
-            }
+            [self setValue:value forPropertyName:key ofObject:instance];
         }
     }
-    return Entity;
+    return instance;
 }
 
 + (NSString *)valueForGetSelectorWithPropertyName:(NSString *)name object:(id)instance{
