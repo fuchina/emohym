@@ -176,15 +176,9 @@
 		5C046E1B1F565A71005531FF /* FSDBFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C046E181F565A71005531FF /* FSDBFlowController.m */; };
 		5C0AFFD11F541A8500FED4FA /* FSCryptorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */; };
 		5C36556B1F46B9B90035D26B /* FSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36556A1F46B9B90035D26B /* FSToast.m */; };
-		5C3C988A1F59065300930090 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C98791F59065300930090 /* CircleView.m */; };
 		5C3C988B1F59065300930090 /* FSCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C987B1F59065300930090 /* FSCircleLayer.m */; };
 		5C3C988C1F59065300930090 /* FSGestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C987D1F59065300930090 /* FSGestureController.m */; };
 		5C3C988D1F59065300930090 /* FSGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C987F1F59065300930090 /* FSGestureView.m */; };
-		5C3C988E1F59065300930090 /* GestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C98811F59065300930090 /* GestureController.m */; };
-		5C3C988F1F59065300930090 /* GestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C98831F59065300930090 /* GestureView.m */; };
-		5C3C98901F59065300930090 /* MJCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C98851F59065300930090 /* MJCircleLayer.m */; };
-		5C3C98911F59065300930090 /* MJPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C98871F59065300930090 /* MJPasswordView.m */; };
-		5C3C98921F59065300930090 /* MJPathLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C98891F59065300930090 /* MJPathLayer.m */; };
 		5C3DD5A91F5509D500D488C5 /* FSNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3DD5A81F5509D500D488C5 /* FSNoteView.m */; };
 		5C3DD5AD1F550B1C00D488C5 /* FSShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3DD5AC1F550B1C00D488C5 /* FSShare.m */; };
 		5C3DD5B61F55615900D488C5 /* FSDBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3DD5B51F55615900D488C5 /* FSDBSupport.m */; };
@@ -578,24 +572,12 @@
 		5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCryptorSupport.m; sourceTree = "<group>"; };
 		5C3655691F46B9B90035D26B /* FSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSToast.h; sourceTree = "<group>"; };
 		5C36556A1F46B9B90035D26B /* FSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSToast.m; sourceTree = "<group>"; };
-		5C3C98781F59065300930090 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
-		5C3C98791F59065300930090 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 		5C3C987A1F59065300930090 /* FSCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCircleLayer.h; sourceTree = "<group>"; };
 		5C3C987B1F59065300930090 /* FSCircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCircleLayer.m; sourceTree = "<group>"; };
 		5C3C987C1F59065300930090 /* FSGestureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSGestureController.h; sourceTree = "<group>"; };
 		5C3C987D1F59065300930090 /* FSGestureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSGestureController.m; sourceTree = "<group>"; };
 		5C3C987E1F59065300930090 /* FSGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSGestureView.h; sourceTree = "<group>"; };
 		5C3C987F1F59065300930090 /* FSGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSGestureView.m; sourceTree = "<group>"; };
-		5C3C98801F59065300930090 /* GestureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureController.h; sourceTree = "<group>"; };
-		5C3C98811F59065300930090 /* GestureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureController.m; sourceTree = "<group>"; };
-		5C3C98821F59065300930090 /* GestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureView.h; sourceTree = "<group>"; };
-		5C3C98831F59065300930090 /* GestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureView.m; sourceTree = "<group>"; };
-		5C3C98841F59065300930090 /* MJCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCircleLayer.h; sourceTree = "<group>"; };
-		5C3C98851F59065300930090 /* MJCircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCircleLayer.m; sourceTree = "<group>"; };
-		5C3C98861F59065300930090 /* MJPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPasswordView.h; sourceTree = "<group>"; };
-		5C3C98871F59065300930090 /* MJPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPasswordView.m; sourceTree = "<group>"; };
-		5C3C98881F59065300930090 /* MJPathLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPathLayer.h; sourceTree = "<group>"; };
-		5C3C98891F59065300930090 /* MJPathLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPathLayer.m; sourceTree = "<group>"; };
 		5C3DD5A71F5509D500D488C5 /* FSNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNoteView.h; sourceTree = "<group>"; };
 		5C3DD5A81F5509D500D488C5 /* FSNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSNoteView.m; sourceTree = "<group>"; };
 		5C3DD5AB1F550B1C00D488C5 /* FSShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShare.h; sourceTree = "<group>"; };
@@ -1535,24 +1517,12 @@
 		5C3C98771F59065300930090 /* Gesture */ = {
 			isa = PBXGroup;
 			children = (
-				5C3C98781F59065300930090 /* CircleView.h */,
-				5C3C98791F59065300930090 /* CircleView.m */,
 				5C3C987A1F59065300930090 /* FSCircleLayer.h */,
 				5C3C987B1F59065300930090 /* FSCircleLayer.m */,
 				5C3C987C1F59065300930090 /* FSGestureController.h */,
 				5C3C987D1F59065300930090 /* FSGestureController.m */,
 				5C3C987E1F59065300930090 /* FSGestureView.h */,
 				5C3C987F1F59065300930090 /* FSGestureView.m */,
-				5C3C98801F59065300930090 /* GestureController.h */,
-				5C3C98811F59065300930090 /* GestureController.m */,
-				5C3C98821F59065300930090 /* GestureView.h */,
-				5C3C98831F59065300930090 /* GestureView.m */,
-				5C3C98841F59065300930090 /* MJCircleLayer.h */,
-				5C3C98851F59065300930090 /* MJCircleLayer.m */,
-				5C3C98861F59065300930090 /* MJPasswordView.h */,
-				5C3C98871F59065300930090 /* MJPasswordView.m */,
-				5C3C98881F59065300930090 /* MJPathLayer.h */,
-				5C3C98891F59065300930090 /* MJPathLayer.m */,
 			);
 			path = Gesture;
 			sourceTree = "<group>";
@@ -1994,7 +1964,6 @@
 				5C4259AC1F50405900DAED6A /* CSPMessageController.m in Sources */,
 				5C0426741F15CBB8004AC010 /* ChineseCalendarView.m in Sources */,
 				5C0426A71F15CBB8004AC010 /* FSAddBirthdayController.m in Sources */,
-				5C3C988A1F59065300930090 /* CircleView.m in Sources */,
 				5C0426F41F15CBB8004AC010 /* FSPwdController.m in Sources */,
 				5C4259AD1F50405900DAED6A /* FSBT.m in Sources */,
 				5C0426CC1F15CBB8004AC010 /* FSImageLabelView.m in Sources */,
@@ -2031,7 +2000,6 @@
 				5C406B7E1F457BB7000A9F21 /* FSUrlInputController.m in Sources */,
 				5C0426801F15CBB8004AC010 /* FATool.m in Sources */,
 				5C0426D71F15CBB8004AC010 /* FSGridCell.m in Sources */,
-				5C3C98901F59065300930090 /* MJCircleLayer.m in Sources */,
 				5C0426AC1F15CBB8004AC010 /* FSDiaryController.m in Sources */,
 				5C0426BA1F15CBB8004AC010 /* FSBaseController.m in Sources */,
 				5C83D77F1F309BFD00A13A2E /* FSPackView.m in Sources */,
@@ -2061,7 +2029,6 @@
 				5C0426BE1F15CBB8004AC010 /* FSHardwareInfoController.m in Sources */,
 				5C0426B71F15CBB8004AC010 /* MapLabel.m in Sources */,
 				5C0426901F15CBB8004AC010 /* FSABTwominusController.m in Sources */,
-				5C3C988E1F59065300930090 /* GestureController.m in Sources */,
 				5CF049781F3473EC00CF239D /* FSVanView.m in Sources */,
 				5C04267F1F15CBB8004AC010 /* FlowCollector.m in Sources */,
 				5CA360D61DC8AD7600523FF5 /* ARHomeController.m in Sources */,
@@ -2072,7 +2039,6 @@
 				5C0426AF1F15CBB8004AC010 /* BankNumberController.m in Sources */,
 				5C04267A1F15CBB8004AC010 /* Datetime.m in Sources */,
 				5C0426B11F15CBB8004AC010 /* FSBankModel.m in Sources */,
-				5C3C98911F59065300930090 /* MJPasswordView.m in Sources */,
 				5CD7E23F1F4295F100358620 /* FSAddPwdBookController.m in Sources */,
 				5C0426B21F15CBB8004AC010 /* HoldViewController.m in Sources */,
 				5C0426CF1F15CBB8004AC010 /* FSTapCell.m in Sources */,
@@ -2137,7 +2103,6 @@
 				5C4C3C3E1F414D210062AFF6 /* FSEditNetsController.m in Sources */,
 				5C4C3C411F41721F0062AFF6 /* FSAllAlertsController.m in Sources */,
 				5CA360DF1DC8ADD800523FF5 /* ARToolController.m in Sources */,
-				5C3C98921F59065300930090 /* MJPathLayer.m in Sources */,
 				5C50E3F81F4A916F00E00B29 /* FSFormModel.m in Sources */,
 				5C917C301F38629000B3A8C6 /* FSDBFormModel.m in Sources */,
 				5C0426BD1F15CBB8004AC010 /* FSCharTBController.m in Sources */,
@@ -2157,7 +2122,6 @@
 				5C0426B01F15CBB8004AC010 /* FSAddBankController.m in Sources */,
 				5C0426871F15CBB8004AC010 /* FSABDetailController.m in Sources */,
 				5C9337FA1DCB447B0091D3D8 /* FSTouchView.m in Sources */,
-				5C3C988F1F59065300930090 /* GestureView.m in Sources */,
 				5C0426D41F15CBB8004AC010 /* FSDatePickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
