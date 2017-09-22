@@ -175,6 +175,7 @@
 		5C046E1A1F565A71005531FF /* FSDBFlowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C046E161F565A71005531FF /* FSDBFlowCell.m */; };
 		5C046E1B1F565A71005531FF /* FSDBFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C046E181F565A71005531FF /* FSDBFlowController.m */; };
 		5C0AFFD11F541A8500FED4FA /* FSCryptorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */; };
+		5C0D459E1F74E064003DECB1 /* FSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D459D1F74E064003DECB1 /* FSContact.m */; };
 		5C36556B1F46B9B90035D26B /* FSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36556A1F46B9B90035D26B /* FSToast.m */; };
 		5C3C988B1F59065300930090 /* FSCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C987B1F59065300930090 /* FSCircleLayer.m */; };
 		5C3C988C1F59065300930090 /* FSGestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C987D1F59065300930090 /* FSGestureController.m */; };
@@ -189,8 +190,6 @@
 		5C406B7E1F457BB7000A9F21 /* FSUrlInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B771F457BB7000A9F21 /* FSUrlInputController.m */; };
 		5C406B7F1F457BB7000A9F21 /* FSUrlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B791F457BB7000A9F21 /* FSUrlModel.m */; };
 		5C406B821F4595CA000A9F21 /* FSHalfView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C406B811F4595CA000A9F21 /* FSHalfView.m */; };
-		5C4259AC1F50405900DAED6A /* CSPMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4259A91F50405900DAED6A /* CSPMessageController.m */; };
-		5C4259AD1F50405900DAED6A /* FSBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4259AB1F50405900DAED6A /* FSBT.m */; };
 		5C4ACBDC1F4C4F3E003C2778 /* FSPwdMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */; };
 		5C4B3BA51F39D64100E9B152 /* FSSeaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B3BA41F39D64100E9B152 /* FSSeaController.m */; };
 		5C4C3C3E1F414D210062AFF6 /* FSEditNetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C3C3D1F414D210062AFF6 /* FSEditNetsController.m */; };
@@ -570,6 +569,8 @@
 		5C046E181F565A71005531FF /* FSDBFlowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBFlowController.m; sourceTree = "<group>"; };
 		5C0AFFCF1F541A8500FED4FA /* FSCryptorSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCryptorSupport.h; sourceTree = "<group>"; };
 		5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCryptorSupport.m; sourceTree = "<group>"; };
+		5C0D459C1F74E064003DECB1 /* FSContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContact.h; sourceTree = "<group>"; };
+		5C0D459D1F74E064003DECB1 /* FSContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSContact.m; sourceTree = "<group>"; };
 		5C3655691F46B9B90035D26B /* FSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSToast.h; sourceTree = "<group>"; };
 		5C36556A1F46B9B90035D26B /* FSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSToast.m; sourceTree = "<group>"; };
 		5C3C987A1F59065300930090 /* FSCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCircleLayer.h; sourceTree = "<group>"; };
@@ -598,10 +599,6 @@
 		5C406B791F457BB7000A9F21 /* FSUrlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUrlModel.m; sourceTree = "<group>"; };
 		5C406B801F4595CA000A9F21 /* FSHalfView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSHalfView.h; sourceTree = "<group>"; };
 		5C406B811F4595CA000A9F21 /* FSHalfView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSHalfView.m; sourceTree = "<group>"; };
-		5C4259A81F50405900DAED6A /* CSPMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPMessageController.h; sourceTree = "<group>"; };
-		5C4259A91F50405900DAED6A /* CSPMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPMessageController.m; sourceTree = "<group>"; };
-		5C4259AA1F50405900DAED6A /* FSBT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBT.h; sourceTree = "<group>"; };
-		5C4259AB1F50405900DAED6A /* FSBT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBT.m; sourceTree = "<group>"; };
 		5C4ACBDA1F4C4F3E003C2778 /* FSPwdMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPwdMaker.h; sourceTree = "<group>"; };
 		5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPwdMaker.m; sourceTree = "<group>"; };
 		5C4B3BA31F39D64100E9B152 /* FSSeaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSeaController.h; sourceTree = "<group>"; };
@@ -1539,6 +1536,8 @@
 		5C83D7791F309BFD00A13A2E /* ViewForFSKit */ = {
 			isa = PBXGroup;
 			children = (
+				5C0D459C1F74E064003DECB1 /* FSContact.h */,
+				5C0D459D1F74E064003DECB1 /* FSContact.m */,
 				5C83D7801F309C5F00A13A2E /* note.txt */,
 				5C83D77A1F309BFD00A13A2E /* FSABPackView.h */,
 				5C83D77B1F309BFD00A13A2E /* FSABPackView.m */,
@@ -1552,10 +1551,6 @@
 				5C4B3BA41F39D64100E9B152 /* FSSeaController.m */,
 				5C4ACBDA1F4C4F3E003C2778 /* FSPwdMaker.h */,
 				5C4ACBDB1F4C4F3E003C2778 /* FSPwdMaker.m */,
-				5C4259A81F50405900DAED6A /* CSPMessageController.h */,
-				5C4259A91F50405900DAED6A /* CSPMessageController.m */,
-				5C4259AA1F50405900DAED6A /* FSBT.h */,
-				5C4259AB1F50405900DAED6A /* FSBT.m */,
 			);
 			path = ViewForFSKit;
 			sourceTree = "<group>";
@@ -1961,11 +1956,9 @@
 				5C0426A21F15CBB8004AC010 /* UIView+Addition.m in Sources */,
 				5C3DD5AD1F550B1C00D488C5 /* FSShare.m in Sources */,
 				5CA360DC1DC8ADCE00523FF5 /* ARPersonController.m in Sources */,
-				5C4259AC1F50405900DAED6A /* CSPMessageController.m in Sources */,
 				5C0426741F15CBB8004AC010 /* ChineseCalendarView.m in Sources */,
 				5C0426A71F15CBB8004AC010 /* FSAddBirthdayController.m in Sources */,
 				5C0426F41F15CBB8004AC010 /* FSPwdController.m in Sources */,
-				5C4259AD1F50405900DAED6A /* FSBT.m in Sources */,
 				5C0426CC1F15CBB8004AC010 /* FSImageLabelView.m in Sources */,
 				5C0426CD1F15CBB8004AC010 /* FSMoveLabel.m in Sources */,
 				5C0426DB1F15CBB8004AC010 /* FSPartListController.m in Sources */,
@@ -2071,6 +2064,7 @@
 				5C3C988D1F59065300930090 /* FSGestureView.m in Sources */,
 				5C04268E1F15CBB8004AC010 /* FSABTrackController.m in Sources */,
 				5C04269B1F15CBB8004AC010 /* KRAes.m in Sources */,
+				5C0D459E1F74E064003DECB1 /* FSContact.m in Sources */,
 				5C0427181F15CBB9004AC010 /* FSTaxRateEntity.m in Sources */,
 				5C0426C41F15CBB8004AC010 /* FSSave.m in Sources */,
 				5C0427031F15CBB8004AC010 /* FSLoanResultController.m in Sources */,
