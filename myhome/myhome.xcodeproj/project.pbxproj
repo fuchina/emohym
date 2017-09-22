@@ -176,6 +176,7 @@
 		5C046E1B1F565A71005531FF /* FSDBFlowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C046E181F565A71005531FF /* FSDBFlowController.m */; };
 		5C0AFFD11F541A8500FED4FA /* FSCryptorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */; };
 		5C0D459E1F74E064003DECB1 /* FSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D459D1F74E064003DECB1 /* FSContact.m */; };
+		5C0D45A41F75046A003DECB1 /* FSDBMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0D45A31F75046A003DECB1 /* FSDBMaster.m */; };
 		5C36556B1F46B9B90035D26B /* FSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C36556A1F46B9B90035D26B /* FSToast.m */; };
 		5C3C988B1F59065300930090 /* FSCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C987B1F59065300930090 /* FSCircleLayer.m */; };
 		5C3C988C1F59065300930090 /* FSGestureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C987D1F59065300930090 /* FSGestureController.m */; };
@@ -571,6 +572,8 @@
 		5C0AFFD01F541A8500FED4FA /* FSCryptorSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCryptorSupport.m; sourceTree = "<group>"; };
 		5C0D459C1F74E064003DECB1 /* FSContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSContact.h; sourceTree = "<group>"; };
 		5C0D459D1F74E064003DECB1 /* FSContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSContact.m; sourceTree = "<group>"; };
+		5C0D45A21F75046A003DECB1 /* FSDBMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDBMaster.h; sourceTree = "<group>"; };
+		5C0D45A31F75046A003DECB1 /* FSDBMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDBMaster.m; sourceTree = "<group>"; };
 		5C3655691F46B9B90035D26B /* FSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSToast.h; sourceTree = "<group>"; };
 		5C36556A1F46B9B90035D26B /* FSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSToast.m; sourceTree = "<group>"; };
 		5C3C987A1F59065300930090 /* FSCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCircleLayer.h; sourceTree = "<group>"; };
@@ -824,6 +827,8 @@
 		5C0424FD1F15CBB8004AC010 /* FSDBMaster */ = {
 			isa = PBXGroup;
 			children = (
+				5C0D45A21F75046A003DECB1 /* FSDBMaster.h */,
+				5C0D45A31F75046A003DECB1 /* FSDBMaster.m */,
 				5C917C281F38629000B3A8C6 /* FSDBMoban */,
 				5C0424FE1F15CBB8004AC010 /* FSDBAccount */,
 				5C04250B1F15CBB8004AC010 /* FSDBTool.h */,
@@ -1970,6 +1975,7 @@
 				5C04269A1F15CBB8004AC010 /* AESCipher.m in Sources */,
 				5C83D77E1F309BFD00A13A2E /* FSABPackView.m in Sources */,
 				5C0426E11F15CBB8004AC010 /* FSIPImageCell.m in Sources */,
+				5C0D45A41F75046A003DECB1 /* FSDBMaster.m in Sources */,
 				5C0427141F15CBB9004AC010 /* FSStoreManager.m in Sources */,
 				5CA360D91DC8ADC300523FF5 /* AROfferController.m in Sources */,
 				5C0427041F15CBB8004AC010 /* FSShowView.m in Sources */,

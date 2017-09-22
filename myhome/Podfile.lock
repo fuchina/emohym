@@ -1,15 +1,15 @@
 PODS:
-  - FSKit (1.0.7)
+  - FSKit (1.0.8)
   - MJRefresh (3.1.12)
 
 DEPENDENCIES:
-  - FSKit (= 1.0.7)
+  - FSKit (= 1.0.8)
   - MJRefresh (~> 3.1.12)
 
 SPEC CHECKSUMS:
-  FSKit: a63d3bdb7fcccc9afcc830f0c4c43965a166b040
+  FSKit: ada63b02364da81bf7955ac9b49b803fffeffb47
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
 
-PODFILE CHECKSUM: 6180d8c2394c4f2e0491997bb6cadc6c8c29abde
+PODFILE CHECKSUM: 0a41aa17d2447a83b028586f161fc9a5e536b669
 
 COCOAPODS: 1.2.1
